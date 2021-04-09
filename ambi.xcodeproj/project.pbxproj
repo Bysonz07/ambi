@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D06912620891900C03AD5 /* AboutViewController.swift */; };
+		EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D069626208A5E00C03AD5 /* RatingViewController.swift */; };
+		EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479B9F261FF4C60059FCCB /* GradientViewController.swift */; };
+		EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479BA4262006210059FCCB /* SettingsTableViewController.swift */; };
+		EB479BAA2620064D0059FCCB /* bgmusik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB479BA92620064D0059FCCB /* bgmusik.mp3 */; };
+		EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */; };
 		EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */; };
 		EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */; };
 		EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE14261D5B0A00F7E5EE /* ViewController.swift */; };
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB1D06912620891900C03AD5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EB1D069626208A5E00C03AD5 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		EB479B9F261FF4C60059FCCB /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		EB479BA4262006210059FCCB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		EB479BA92620064D0059FCCB /* bgmusik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusik.mp3; sourceTree = "<group>"; };
+		EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaytimeTableViewController.swift; sourceTree = "<group>"; };
 		EF36DE0D261D5B0900F7E5EE /* ambi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ambi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,9 +115,15 @@
 				EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */,
 				EF36DE14261D5B0A00F7E5EE /* ViewController.swift */,
 				EF36DE16261D5B0A00F7E5EE /* Main.storyboard */,
+				EB1D069626208A5E00C03AD5 /* RatingViewController.swift */,
+				EB1D06912620891900C03AD5 /* AboutViewController.swift */,
+				EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */,
+				EB479BA4262006210059FCCB /* SettingsTableViewController.swift */,
 				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
 				EF36DE1B261D5B0B00F7E5EE /* LaunchScreen.storyboard */,
 				EF36DE1E261D5B0B00F7E5EE /* Info.plist */,
+				EB479B9F261FF4C60059FCCB /* GradientViewController.swift */,
+				EB479BA92620064D0059FCCB /* bgmusik.mp3 */,
 			);
 			path = ambi;
 			sourceTree = "<group>";
@@ -234,6 +252,7 @@
 				EF36DE1D261D5B0B00F7E5EE /* LaunchScreen.storyboard in Resources */,
 				EF36DE1A261D5B0B00F7E5EE /* Assets.xcassets in Resources */,
 				EF36DE18261D5B0A00F7E5EE /* Main.storyboard in Resources */,
+				EB479BAA2620064D0059FCCB /* bgmusik.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */,
+				EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */,
+				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
+				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
+				EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */,
 				EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */,
 				EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */,
 				EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */,
