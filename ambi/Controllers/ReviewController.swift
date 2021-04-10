@@ -23,6 +23,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        brain.animateOpacity(outletReviewCollection.layer)
         inputImage()
     }
     

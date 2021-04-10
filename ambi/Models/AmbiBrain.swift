@@ -28,8 +28,8 @@ class AmbiBrain{
     
     func animateOpacity(_ layer : CALayer) {
         let animation = CABasicAnimation(keyPath: "opacity")
-        animation.fromValue = 1
-        animation.toValue = 0
+        animation.fromValue = 0
+        animation.toValue = 1
         animation.duration = 2
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation.fillMode = CAMediaTimingFillMode.forwards
@@ -87,28 +87,17 @@ class AmbiBrain{
         uiImageView.image = animatedImageFix
     }
     
-    func animateBarangMasok(uiIMageView1 : UIImageView, uiImageView2 : UIImageView, uiImageView3 : UIImageView, transitionDuration : TimeInterval) {
-        var animatedImage6 : UIImage!
-        var animatedImage7 : UIImage!
-        var animatedImage8 : UIImage!
+    func animateBarangMasok(itemName : String, uiIMageView1 : UIImageView, transitionDuration : TimeInterval) {
+        var animatedImage : UIImage!
+                
+        animatedImage = UIImage (named: itemName )
         
-        animatedImage6 = UIImage (named: "penghapus.png" )
-        animatedImage7 = UIImage (named: "crayon.png")
-        animatedImage8 = UIImage (named: "penggares.png")
-        
-        uiIMageView1.image = animatedImage6
-        uiImageView2.image = animatedImage7
-        uiImageView3.image = animatedImage8
-        
+        uiIMageView1.image = animatedImage
+       
         UIView.transition(with: uiIMageView1, duration: transitionDuration, options: .transitionCrossDissolve, animations:{
-            uiIMageView1.image = animatedImage6;
+            uiIMageView1.image = animatedImage;
         }, completion: nil)
-        UIView.transition(with: uiImageView2, duration: transitionDuration, options: .transitionCrossDissolve, animations:{
-            uiImageView2.image = animatedImage7;
-        }, completion: nil)
-        UIView.transition(with: uiImageView3, duration: transitionDuration, options: .transitionCrossDissolve, animations:{
-            uiImageView3.image = animatedImage8;
-        }, completion: nil)
+        
     }
     
     func animateLabelMasok(_ label1 : UILabel, _ label2 : UILabel, _ label3 : UILabel) {
