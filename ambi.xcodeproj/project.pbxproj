@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98A1D7F826217FDE0002BFE0 /* AmbiBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1D7F726217FDE0002BFE0 /* AmbiBrain.swift */; };
+		98A1D801262182CB0002BFE0 /* earworm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98A1D800262182CB0002BFE0 /* earworm.mp3 */; };
 		EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */; };
 		EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */; };
 		EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE14261D5B0A00F7E5EE /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98A1D7F726217FDE0002BFE0 /* AmbiBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbiBrain.swift; sourceTree = "<group>"; };
+		98A1D800262182CB0002BFE0 /* earworm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = earworm.mp3; path = "../../../../../Music/Music/Media.localized/Music/Aqmal Syawali/Unknown Album/earworm.mp3"; sourceTree = "<group>"; };
 		EF36DE0D261D5B0900F7E5EE /* ambi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ambi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98A1D7F626217FCE0002BFE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98A1D7F726217FDE0002BFE0 /* AmbiBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98A1D7FF262182B40002BFE0 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				98A1D800262182CB0002BFE0 /* earworm.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		EF36DE04261D5B0900F7E5EE = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +119,8 @@
 		EF36DE0F261D5B0900F7E5EE /* ambi */ = {
 			isa = PBXGroup;
 			children = (
+				98A1D7FF262182B40002BFE0 /* Music */,
+				98A1D7F626217FCE0002BFE0 /* Model */,
 				EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */,
 				EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */,
 				EF36DE14261D5B0A00F7E5EE /* ViewController.swift */,
@@ -233,6 +255,7 @@
 			files = (
 				EF36DE1D261D5B0B00F7E5EE /* LaunchScreen.storyboard in Resources */,
 				EF36DE1A261D5B0B00F7E5EE /* Assets.xcassets in Resources */,
+				98A1D801262182CB0002BFE0 /* earworm.mp3 in Resources */,
 				EF36DE18261D5B0A00F7E5EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +284,7 @@
 				EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */,
 				EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */,
 				EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */,
+				98A1D7F826217FDE0002BFE0 /* AmbiBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
