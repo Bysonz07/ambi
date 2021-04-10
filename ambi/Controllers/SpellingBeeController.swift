@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var brain = AmbiBrain()
     let text = "Wohooo!!!!"
 
+    @IBOutlet weak var nextButtonToReview: UIButton!
     @IBOutlet weak var soundButtonOutlet: UIButton!
     @IBOutlet weak var gifAnimation1: UIImageView!
     @IBOutlet weak var gifAnimation2: UIImageView!
@@ -44,6 +45,21 @@ class ViewController: UIViewController {
         soundButtonOutlet.alpha = 1
     }
     
+    @IBAction func nextButtonToReviewAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToReview", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if segue.identifier == "goToReview" {
+            let destinationReview = segue.destination as! ReviewController
+//            destinationVC.bmiValue3 = calculatorBrain.getBMIValue()
+//            destinationVC.adviceText1 = calculatorBrain.getAdvice()
+//            destinationVC.color1 = calculatorBrain.getColor()
+            
+        }
+    }
     
     
     override func viewDidLoad() {
