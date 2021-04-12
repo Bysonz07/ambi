@@ -9,10 +9,13 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        // Do any additional setup after loading the view.
+        UINavigationBar.appearance().shadowImage = UIImage()
         // Override point for customization after application launch.
         return true
     }
