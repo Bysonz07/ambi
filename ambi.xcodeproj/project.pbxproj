@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */; };
+		BF65667A2623E6B400EFF624 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */; };
+		BF6566852623ED9C00EFF624 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */; };
+		BF6566862623ED9C00EFF624 /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */; };
+		BF6566872623ED9C00EFF624 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6566812623ED9C00EFF624 /* OFL.txt */; };
+		BF6566882623ED9C00EFF624 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */; };
+		BF6566892623ED9C00EFF624 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */; };
+		BF65668A2623ED9C00EFF624 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */; };
+		BF65669A2623F4AD00EFF624 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566982623F4AD00EFF624 /* PopUpVC.swift */; };
+		BF65669B2623F4AD00EFF624 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566992623F4AD00EFF624 /* PopUpVC.xib */; };
+		BF6566A12623F4CD00EFF624 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */; };
+		BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */; };
 		BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA382C2623B84B00CDF56B /* PopOver.storyboard */; };
 		BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */; };
 		BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */; };
@@ -48,6 +60,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		BF6566812623ED9C00EFF624 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BF6566982623F4AD00EFF624 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		BF6566992623F4AD00EFF624 /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		BFCA382D2623B84B00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ambi/Base.lproj/PopOver.storyboard; sourceTree = "<group>"; };
 		BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
@@ -102,6 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF65667E2623ED9C00EFF624 /* Baloo_2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */,
+				BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */,
+				BF6566812623ED9C00EFF624 /* OFL.txt */,
+				BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */,
+				BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */,
+				BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */,
+			);
+			path = Baloo_2;
+			sourceTree = "<group>";
+		};
 		BFCA38392623B99400CDF56B /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,19 +183,26 @@
 				EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */,
 				EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */,
 				EF36DE14261D5B0A00F7E5EE /* ViewController.swift */,
+				BF6566982623F4AD00EFF624 /* PopUpVC.swift */,
+				BF6566992623F4AD00EFF624 /* PopUpVC.xib */,
 				EF36DE16261D5B0A00F7E5EE /* Main.storyboard */,
 				EB1D069626208A5E00C03AD5 /* RatingViewController.swift */,
 				EB1D06912620891900C03AD5 /* AboutViewController.swift */,
 				EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */,
+				BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */,
+				BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */,
 				EB479BA4262006210059FCCB /* SettingsTableViewController.swift */,
 				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
 				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
 				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
+				BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */,
+				BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */,
 				BFCA38592623CD3E00CDF56B /* Emitter.swift */,
 				EF36DE1B261D5B0B00F7E5EE /* LaunchScreen.storyboard */,
 				EF36DE1E261D5B0B00F7E5EE /* Info.plist */,
 				EB479B9F261FF4C60059FCCB /* GradientViewController.swift */,
 				EB479BA92620064D0059FCCB /* bgmusik.mp3 */,
+				BF65667E2623ED9C00EFF624 /* Baloo_2 */,
 				BFCA38532623BC3300CDF56B /* Model */,
 				BFCA38392623B99400CDF56B /* Item */,
 			);
@@ -286,13 +330,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6566882623ED9C00EFF624 /* Baloo2-Regular.ttf in Resources */,
 				BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */,
+				BF6566872623ED9C00EFF624 /* OFL.txt in Resources */,
+				BF6566892623ED9C00EFF624 /* Baloo2-Medium.ttf in Resources */,
 				EF36DE1D261D5B0B00F7E5EE /* LaunchScreen.storyboard in Resources */,
 				BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */,
+				BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */,
+				BF6566852623ED9C00EFF624 /* Baloo2-Bold.ttf in Resources */,
+				BF65667A2623E6B400EFF624 /* HomeCollectionViewCell.xib in Resources */,
 				BFCA384F2623BC1E00CDF56B /* SpellingBee.storyboard in Resources */,
 				EF36DE1A261D5B0B00F7E5EE /* Assets.xcassets in Resources */,
+				BF65669B2623F4AD00EFF624 /* PopUpVC.xib in Resources */,
 				EF36DE18261D5B0A00F7E5EE /* Main.storyboard in Resources */,
+				BF6566862623ED9C00EFF624 /* Baloo2-SemiBold.ttf in Resources */,
 				EB479BAA2620064D0059FCCB /* bgmusik.mp3 in Resources */,
+				BF65668A2623ED9C00EFF624 /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,11 +375,14 @@
 				BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */,
 				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
 				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
+				BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */,
 				EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */,
 				EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */,
 				EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */,
 				BFCA38552623BC3300CDF56B /* AmbiBrain.swift in Sources */,
 				EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */,
+				BF6566A12623F4CD00EFF624 /* MyCollectionViewCell.swift in Sources */,
+				BF65669A2623F4AD00EFF624 /* PopUpVC.swift in Sources */,
 				BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */,
 				BFCA38492623BC1100CDF56B /* SpellingBeeViewController.swift in Sources */,
 			);

@@ -12,7 +12,9 @@ var musicPlayer : AVAudioPlayer!
 let url = Bundle.main.url(forResource: "bgmusik", withExtension: "mp3")
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var homeCollectionView: UICollectionView!
+    
     func stopSound() {
             
             musicPlayer = try! AVAudioPlayer(contentsOf: url!)
@@ -25,6 +27,8 @@ class ViewController: UIViewController {
         musicPlayer.play()
     }
     
+    
+    //View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +47,17 @@ class ViewController: UIViewController {
 
         self.navigationItem.titleView = UIImageView ( image: UIImage(named: "logoambi"))
         
-        
+        //Collection View
+        homeCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+      
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 500, height: 500)
+        homeCollectionView.collectionViewLayout = layout
+        homeCollectionView.backgroundColor = .clear
+        homeCollectionView.delegate = self
+        homeCollectionView.dataSource = self
+    
         //emitter bg
         subtleAnimate()
     }
@@ -62,4 +76,47 @@ class ViewController: UIViewController {
 }
 
 
+extension ViewController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        if indexPath.item == 1 {
+            performSegue(withIdentifier: "Modality", sender: nil)
+        }
+        else if indexPath.item == 2{
+            performSegue(withIdentifier: "Modality", sender: nil)
+        }
+        else if indexPath.item == 3{
+            performSegue(withIdentifier: "Modality", sender: nil)
+        }
+        
+    }
+    
+}
+
+extension ViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
+        
+       let dataCard = ["Colors","Stationery","Shapes"]
+        for data in indexPath{
+            cell.configure(with: UIImage(named: dataCard[data])!, and: dataCard[data])
+        }
+        
+        return cell
+    }
+    
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout{ //let specify what is the margin and padding between cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 500, height: 500)
+    }
+    
+}
 
