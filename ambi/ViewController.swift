@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         }
     
     func playSound() {
-        let url = Bundle.main.url(forResource: "bgmusik", withExtension: "mp3")
+        
         musicPlayer = try! AVAudioPlayer(contentsOf: url!)
         musicPlayer.play()
     }
@@ -80,15 +80,15 @@ extension ViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if indexPath.item == 1 {
-            performSegue(withIdentifier: "Modality", sender: nil)
-        }
-        else if indexPath.item == 2{
-            performSegue(withIdentifier: "Modality", sender: nil)
-        }
-        else if indexPath.item == 3{
-            performSegue(withIdentifier: "Modality", sender: nil)
-        }
+//        if indexPath.item == 1 {
+//            performSegue(withIdentifier: "Modality", sender: nil)
+//        }
+//        else if indexPath.item == 2{
+//            performSegue(withIdentifier: "Modality", sender: nil)
+//        }
+//        else if indexPath.item == 3{
+//            performSegue(withIdentifier: "Modality", sender: nil)
+//        }
         
     }
     
@@ -105,6 +105,9 @@ extension ViewController: UICollectionViewDataSource{
        let dataCard = ["Colors","Stationery","Shapes"]
         for data in indexPath{
             cell.configure(with: UIImage(named: dataCard[data])!, and: dataCard[data])
+        }
+        cell.onMoreButtonClick = {
+            self.performSegue(withIdentifier: "Modality", sender: nil)
         }
         
         return cell

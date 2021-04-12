@@ -13,9 +13,6 @@
         <array key="Baloo2-Medium.ttf">
             <string>Baloo2-Medium</string>
         </array>
-        <array key="Baloo2-Regular.ttf">
-            <string>Baloo2-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Pop UpVC-->
@@ -27,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2G-it-n8a">
-                                <rect key="frame" x="20" y="280" width="660" height="570"/>
+                                <rect key="frame" x="20" y="183" width="660" height="570"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="735-pk-k26">
@@ -47,24 +44,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-bd-gzU">
-                                <rect key="frame" x="198" y="877" width="52" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Oke">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-fC-qrp">
-                                <rect key="frame" x="425" y="876" width="109" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Random">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Want to select your Item?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSL-Eg-XIx">
-                                <rect key="frame" x="130" y="129" width="444" height="63"/>
+                                <rect key="frame" x="130" y="85" width="444" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +61,22 @@
                                 <connections>
                                     <action selector="closePopup:" destination="03M-JV-otC" eventType="touchUpInside" id="DJ8-y1-9g7"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi1-bd-gzU">
+                                <rect key="frame" x="184" y="806" width="52" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Oke">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-fC-qrp">
+                                <rect key="frame" x="411" y="805" width="109" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Random">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hei-5L-wxU"/>
@@ -99,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-xy-g44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896.9253294289897" y="-652.1484375"/>
+            <point key="canvasLocation" x="863" y="-652"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -130,28 +127,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPR-zP-5lo">
-                                <rect key="frame" x="326" y="864" width="155" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Randomizer">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xkO-IG-1sO" kind="show" identifier="randomizer" id="XKL-Bb-qUI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLU-0j-4kv">
-                                <rect key="frame" x="710" y="863" width="158" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Spelling Bee">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jKb-uZ-HcH" kind="show" identifier="spellingBee" id="682-ca-giM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -180,6 +155,7 @@
                     <connections>
                         <outlet property="homeCollectionView" destination="DVo-h3-fGE" id="prb-oi-xar"/>
                         <segue destination="03M-JV-otC" kind="presentation" identifier="Modality" id="Up4-DP-s7I"/>
+                        <segue destination="xkO-IG-1sO" kind="show" identifier="randomizer" id="N4T-RD-ciw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -189,10 +165,10 @@
         <!--SpellingBee-->
         <scene sceneID="0QP-7u-IRP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGX-3s-nZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="SpellingBee" id="jKb-uZ-HcH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="oB0-bi-qIz"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RGX-3s-nZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="962" y="520"/>
         </scene>
@@ -220,15 +196,15 @@
                 <viewControllerPlaceholder storyboardName="PopOver" id="Smg-ya-b1d" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFN-YV-IN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647.5841874084917" y="113.67187499999999"/>
+            <point key="canvasLocation" x="1224" y="-178"/>
         </scene>
         <!--Randomizer-->
         <scene sceneID="G5L-Bg-BdI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCJ-GG-VLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Randomizer" id="xkO-IG-1sO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hdg-sb-3Vh"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YCJ-GG-VLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="715" y="520"/>
         </scene>

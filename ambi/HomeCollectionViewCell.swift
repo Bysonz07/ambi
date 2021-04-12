@@ -13,9 +13,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var segueButton: UIButton!
+    var onMoreButtonClick: (()-> ())?
     
     @IBAction func segueButtonAction(_ sender: Any) {
-        
+        if onMoreButtonClick != nil {
+            onMoreButtonClick!()
+        }
     }
     
     var seg: String = ""

@@ -19,15 +19,25 @@ class RandomizerViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Stationery"
+        
         //emitter
         subtleAnimate()
+        
+        //displayLink
+        let displaylink = CADisplayLink(target: self, selector: #selector(handleUpdate))
     }
-
+    
+    @objc func handleUpdate(){
+        let seconds = Date()
+    }
+    
     @IBAction func showImage(_ sender: Any) {
         let number:Int = Int (arc4random_uniform(12));
         
         imageRandom.image = UIImage (named: imageNames[number]);
+        imageRandom.layer.cornerRadius = 12
         randomGetLabel.text = imageNames[number]
+        
     }
     
 

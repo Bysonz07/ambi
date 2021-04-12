@@ -11,6 +11,9 @@ class MyCollectionViewCell: UICollectionViewCell {
 
     //xib = xcode interface builder, nib = next interface builder (global name)
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var itemName: UILabel!
+    
+    var isCellSelected = false
     
 //    fileprivate let bg: UIImageView = {
 //       let iv = UIImageView()
@@ -29,14 +32,26 @@ class MyCollectionViewCell: UICollectionViewCell {
         
         }
     
-    public func configure(with image: UIImage){ //dequeing
+    public func configure(with image: UIImage, item: String){ //dequeing
         imageView.image = image
         imageView.layer.cornerRadius = 12
         imageView.backgroundColor = .white
+        itemName.text = item
     }
     
     static func nib() -> UINib {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
+    }
+    
+    func toggleCheckButton(){
+        isCellSelected.toggle()
+        
+        if isCellSelected{
+            
+            //update the interface for on state
+        }else{
+            //update the interface for off state
+        }
     }
     
     

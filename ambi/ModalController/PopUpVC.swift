@@ -40,6 +40,8 @@ extension PopUpVC: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         print("You tapped me at \(indexPath)")
+//        let cell = collectionView.cellForItem(at: <#T##IndexPath#>) //This return UICollectionView Cell you need to type cast it
+        // After you have the access to the cell, you can do whatever you want
         
     }
     
@@ -55,7 +57,7 @@ extension PopUpVC: UICollectionViewDataSource{
         
         let dataCard = ["Book","Brush","Crayon","Eraser","Glue","Highlighter","Paper","Pen","Pencil","Ruler","Sharpener","Tape"]
          for data in indexPath{
-             cell.configure(with: UIImage(named: dataCard[data])!)
+            cell.configure(with: UIImage(named: dataCard[data])!, item: dataCard[data])
              
          }
         return cell

@@ -143,6 +143,26 @@
 			path = Baloo_2;
 			sourceTree = "<group>";
 		};
+		BF6C51FA26244705008D27D9 /* ModalController */ = {
+			isa = PBXGroup;
+			children = (
+				BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */,
+				BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */,
+				BF6566982623F4AD00EFF624 /* PopUpVC.swift */,
+				BF6566992623F4AD00EFF624 /* PopUpVC.xib */,
+			);
+			path = ModalController;
+			sourceTree = "<group>";
+		};
+		BF6C51FF2624475A008D27D9 /* SpellingBee */ = {
+			isa = PBXGroup;
+			children = (
+				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
+				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
+			);
+			path = SpellingBee;
+			sourceTree = "<group>";
+		};
 		BFCA38392623B99400CDF56B /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,31 +203,27 @@
 		EF36DE0F261D5B0900F7E5EE /* ambi */ = {
 			isa = PBXGroup;
 			children = (
-				BFCA382C2623B84B00CDF56B /* PopOver.storyboard */,
 				EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */,
 				EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */,
 				EF36DE14261D5B0A00F7E5EE /* ViewController.swift */,
-				BF6566982623F4AD00EFF624 /* PopUpVC.swift */,
-				BF6566992623F4AD00EFF624 /* PopUpVC.xib */,
 				EF36DE16261D5B0A00F7E5EE /* Main.storyboard */,
-				EB1D069626208A5E00C03AD5 /* RatingViewController.swift */,
-				EB1D06912620891900C03AD5 /* AboutViewController.swift */,
-				EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */,
 				BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */,
 				BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */,
-				EB479BA4262006210059FCCB /* SettingsTableViewController.swift */,
-				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
-				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
-				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
 				BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */,
 				BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */,
-				BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */,
-				BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */,
 				BFCA38592623CD3E00CDF56B /* Emitter.swift */,
 				EF36DE1B261D5B0B00F7E5EE /* LaunchScreen.storyboard */,
-				EF36DE1E261D5B0B00F7E5EE /* Info.plist */,
 				EB479B9F261FF4C60059FCCB /* GradientViewController.swift */,
+				EB479BA4262006210059FCCB /* SettingsTableViewController.swift */,
+				EB1D069626208A5E00C03AD5 /* RatingViewController.swift */,
+				EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */,
+				EB1D06912620891900C03AD5 /* AboutViewController.swift */,
+				BFCA382C2623B84B00CDF56B /* PopOver.storyboard */,
+				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
 				EB479BA92620064D0059FCCB /* bgmusik.mp3 */,
+				EF36DE1E261D5B0B00F7E5EE /* Info.plist */,
+				BF6C51FA26244705008D27D9 /* ModalController */,
+				BF6C51FF2624475A008D27D9 /* SpellingBee */,
 				BF65667E2623ED9C00EFF624 /* Baloo_2 */,
 				BFCA38532623BC3300CDF56B /* Model */,
 				BFCA38392623B99400CDF56B /* Item */,

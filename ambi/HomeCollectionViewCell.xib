@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfe-PH-ilS">
-                        <rect key="frame" x="231" y="214" width="71" height="61"/>
+                        <rect key="frame" x="242" y="20" width="71" height="61"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="moree">
@@ -50,12 +50,12 @@
                 <constraint firstItem="YyZ-BM-Rl3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="54" id="FDK-t6-l7O"/>
                 <constraint firstItem="Pg2-kn-cL4" firstAttribute="centerX" secondItem="YyZ-BM-Rl3" secondAttribute="centerX" id="LEI-t8-4ac"/>
                 <constraint firstAttribute="trailing" secondItem="YyZ-BM-Rl3" secondAttribute="trailing" id="SZt-be-P8w"/>
-                <constraint firstItem="Hfe-PH-ilS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="214" id="Zde-dU-xYU"/>
+                <constraint firstItem="Hfe-PH-ilS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Zde-dU-xYU"/>
                 <constraint firstItem="YyZ-BM-Rl3" firstAttribute="top" secondItem="Pg2-kn-cL4" secondAttribute="bottom" constant="-23" id="bcY-7e-qHL"/>
-                <constraint firstAttribute="bottom" secondItem="Hfe-PH-ilS" secondAttribute="bottom" constant="-32" id="feJ-zW-A9S"/>
-                <constraint firstItem="Hfe-PH-ilS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="231" id="pdh-uS-AFC"/>
+                <constraint firstAttribute="bottom" secondItem="Hfe-PH-ilS" secondAttribute="bottom" constant="162" id="feJ-zW-A9S"/>
+                <constraint firstItem="Hfe-PH-ilS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="242" id="pdh-uS-AFC"/>
                 <constraint firstItem="YyZ-BM-Rl3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qGw-6L-vvt"/>
-                <constraint firstAttribute="trailing" secondItem="Hfe-PH-ilS" secondAttribute="trailing" constant="-47" id="zZy-jM-FUn"/>
+                <constraint firstAttribute="trailing" secondItem="Hfe-PH-ilS" secondAttribute="trailing" constant="-58" id="zZy-jM-FUn"/>
             </constraints>
             <size key="customSize" width="255" height="243"/>
             <connections>
@@ -63,7 +63,7 @@
                 <outlet property="nameLabel" destination="Pg2-kn-cL4" id="yBm-jD-de8"/>
                 <outlet property="segueButton" destination="Hfe-PH-ilS" id="oG3-rd-BMe"/>
             </connections>
-            <point key="canvasLocation" x="126.81159420289856" y="100.78125"/>
+            <point key="canvasLocation" x="125" y="96"/>
         </collectionViewCell>
     </objects>
     <resources>
