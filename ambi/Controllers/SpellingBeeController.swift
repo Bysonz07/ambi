@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     var musicPlayer : AVAudioPlayer!
     var brain = AmbiBrain()
-    let text = "Wohooo!!!!"
+    let text = "Highlighter"
 
     @IBOutlet weak var nextButtonToReview: UIButton!
     @IBOutlet weak var soundButtonOutlet: UIButton!

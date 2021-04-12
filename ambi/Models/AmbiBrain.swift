@@ -127,6 +127,7 @@ class AmbiBrain{
     func juglingText(text : String, listOfLabels : [UILabel]!) {
         let listOfCharacters = Array(text)
         let animation = CABasicAnimation(keyPath: "transform.scale")
+        var musicName1 : String
 
         
         animation.fromValue = 1
@@ -138,8 +139,12 @@ class AmbiBrain{
         
         for i in 0...listOfCharacters.count - 1 {
             listOfLabels[i].layer.add(animation, forKey: nil)
+            musicName1 = "audio" + String(listOfCharacters[i]).capitalized
+            playSound(musicName: musicName1)
             RunLoop.current.run(until: Date()+1)
         }
+        
+        playSound(musicName: "audio" + String(text).capitalized)
         
     }
     
