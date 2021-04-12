@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */; };
+		BF65667A2623E6B400EFF624 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */; };
+		BF6566852623ED9C00EFF624 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */; };
+		BF6566862623ED9C00EFF624 /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */; };
+		BF6566872623ED9C00EFF624 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF6566812623ED9C00EFF624 /* OFL.txt */; };
+		BF6566882623ED9C00EFF624 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */; };
+		BF6566892623ED9C00EFF624 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */; };
+		BF65668A2623ED9C00EFF624 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */; };
+		BF65669A2623F4AD00EFF624 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566982623F4AD00EFF624 /* PopUpVC.swift */; };
+		BF65669B2623F4AD00EFF624 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566992623F4AD00EFF624 /* PopUpVC.xib */; };
+		BF6566A12623F4CD00EFF624 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */; };
+		BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */; };
+		BF6566B02623FB9100EFF624 /* Randomizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */; };
+		BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */; };
+		BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA382C2623B84B00CDF56B /* PopOver.storyboard */; };
+		BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */; };
+		BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */; };
+		BFCA38492623BC1100CDF56B /* SpellingBeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */; };
+		BFCA384F2623BC1E00CDF56B /* SpellingBee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */; };
+		BFCA38552623BC3300CDF56B /* AmbiBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38542623BC3300CDF56B /* AmbiBrain.swift */; };
+		BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38592623CD3E00CDF56B /* Emitter.swift */; };
+		EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D06912620891900C03AD5 /* AboutViewController.swift */; };
+		EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D069626208A5E00C03AD5 /* RatingViewController.swift */; };
+		EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479B9F261FF4C60059FCCB /* GradientViewController.swift */; };
+		EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479BA4262006210059FCCB /* SettingsTableViewController.swift */; };
+		EB479BAA2620064D0059FCCB /* bgmusik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB479BA92620064D0059FCCB /* bgmusik.mp3 */; };
+		EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */; };
 		EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */; };
 		EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */; };
 		EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36DE14261D5B0A00F7E5EE /* ViewController.swift */; };
@@ -35,6 +62,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		BF6566812623ED9C00EFF624 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BF6566982623F4AD00EFF624 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		BF6566992623F4AD00EFF624 /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Randomizer.storyboard; sourceTree = "<group>"; };
+		BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerViewController.swift; sourceTree = "<group>"; };
+		BFCA382D2623B84B00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ambi/Base.lproj/PopOver.storyboard; sourceTree = "<group>"; };
+		BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
+		BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
+		BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingBeeViewController.swift; sourceTree = "<group>"; };
+		BFCA384E2623BC1E00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SpellingBee.storyboard; sourceTree = "<group>"; };
+		BFCA38542623BC3300CDF56B /* AmbiBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbiBrain.swift; sourceTree = "<group>"; };
+		BFCA38592623CD3E00CDF56B /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		EB1D06912620891900C03AD5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EB1D069626208A5E00C03AD5 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		EB479B9F261FF4C60059FCCB /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		EB479BA4262006210059FCCB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		EB479BA92620064D0059FCCB /* bgmusik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusik.mp3; sourceTree = "<group>"; };
+		EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaytimeTableViewController.swift; sourceTree = "<group>"; };
 		EF36DE0D261D5B0900F7E5EE /* ambi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ambi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36DE10261D5B0900F7E5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +130,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF65667E2623ED9C00EFF624 /* Baloo_2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF65667F2623ED9C00EFF624 /* Baloo2-Bold.ttf */,
+				BF6566802623ED9C00EFF624 /* Baloo2-SemiBold.ttf */,
+				BF6566812623ED9C00EFF624 /* OFL.txt */,
+				BF6566822623ED9C00EFF624 /* Baloo2-Regular.ttf */,
+				BF6566832623ED9C00EFF624 /* Baloo2-Medium.ttf */,
+				BF6566842623ED9C00EFF624 /* Baloo2-ExtraBold.ttf */,
+			);
+			path = Baloo_2;
+			sourceTree = "<group>";
+		};
+		BF6C51FA26244705008D27D9 /* ModalController */ = {
+			isa = PBXGroup;
+			children = (
+				BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */,
+				BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */,
+				BF6566982623F4AD00EFF624 /* PopUpVC.swift */,
+				BF6566992623F4AD00EFF624 /* PopUpVC.xib */,
+			);
+			path = ModalController;
+			sourceTree = "<group>";
+		};
+		BF6C51FF2624475A008D27D9 /* SpellingBee */ = {
+			isa = PBXGroup;
+			children = (
+				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
+				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
+			);
+			path = SpellingBee;
+			sourceTree = "<group>";
+		};
+		BFCA38392623B99400CDF56B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */,
+				BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		BFCA38532623BC3300CDF56B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFCA38542623BC3300CDF56B /* AmbiBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EF36DE04261D5B0900F7E5EE = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +207,26 @@
 				EF36DE12261D5B0A00F7E5EE /* SceneDelegate.swift */,
 				EF36DE14261D5B0A00F7E5EE /* ViewController.swift */,
 				EF36DE16261D5B0A00F7E5EE /* Main.storyboard */,
-				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
+				BF6566772623E6B400EFF624 /* HomeCollectionViewCell.swift */,
+				BF6566782623E6B400EFF624 /* HomeCollectionViewCell.xib */,
+				BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */,
+				BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */,
+				BFCA38592623CD3E00CDF56B /* Emitter.swift */,
 				EF36DE1B261D5B0B00F7E5EE /* LaunchScreen.storyboard */,
+				EB479B9F261FF4C60059FCCB /* GradientViewController.swift */,
+				EB479BA4262006210059FCCB /* SettingsTableViewController.swift */,
+				EB1D069626208A5E00C03AD5 /* RatingViewController.swift */,
+				EB479BAE26200D720059FCCB /* PlaytimeTableViewController.swift */,
+				EB1D06912620891900C03AD5 /* AboutViewController.swift */,
+				BFCA382C2623B84B00CDF56B /* PopOver.storyboard */,
+				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
+				EB479BA92620064D0059FCCB /* bgmusik.mp3 */,
 				EF36DE1E261D5B0B00F7E5EE /* Info.plist */,
+				BF6C51FA26244705008D27D9 /* ModalController */,
+				BF6C51FF2624475A008D27D9 /* SpellingBee */,
+				BF65667E2623ED9C00EFF624 /* Baloo_2 */,
+				BFCA38532623BC3300CDF56B /* Model */,
+				BFCA38392623B99400CDF56B /* Item */,
 			);
 			path = ambi;
 			sourceTree = "<group>";
@@ -231,9 +352,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6566B02623FB9100EFF624 /* Randomizer.storyboard in Resources */,
+				BF6566882623ED9C00EFF624 /* Baloo2-Regular.ttf in Resources */,
+				BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */,
+				BF6566872623ED9C00EFF624 /* OFL.txt in Resources */,
+				BF6566892623ED9C00EFF624 /* Baloo2-Medium.ttf in Resources */,
 				EF36DE1D261D5B0B00F7E5EE /* LaunchScreen.storyboard in Resources */,
+				BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */,
+				BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */,
+				BF6566852623ED9C00EFF624 /* Baloo2-Bold.ttf in Resources */,
+				BF65667A2623E6B400EFF624 /* HomeCollectionViewCell.xib in Resources */,
+				BFCA384F2623BC1E00CDF56B /* SpellingBee.storyboard in Resources */,
 				EF36DE1A261D5B0B00F7E5EE /* Assets.xcassets in Resources */,
+				BF65669B2623F4AD00EFF624 /* PopUpVC.xib in Resources */,
 				EF36DE18261D5B0A00F7E5EE /* Main.storyboard in Resources */,
+				BF6566862623ED9C00EFF624 /* Baloo2-SemiBold.ttf in Resources */,
+				EB479BAA2620064D0059FCCB /* bgmusik.mp3 in Resources */,
+				BF65668A2623ED9C00EFF624 /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +393,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */,
+				EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */,
+				BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */,
+				BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */,
+				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
+				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
+				BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */,
+				EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */,
 				EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */,
 				EF36DE11261D5B0900F7E5EE /* AppDelegate.swift in Sources */,
+				BFCA38552623BC3300CDF56B /* AmbiBrain.swift in Sources */,
 				EF36DE13261D5B0A00F7E5EE /* SceneDelegate.swift in Sources */,
+				BF6566A12623F4CD00EFF624 /* MyCollectionViewCell.swift in Sources */,
+				BF65669A2623F4AD00EFF624 /* PopUpVC.swift in Sources */,
+				BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */,
+				BFCA38492623BC1100CDF56B /* SpellingBeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +444,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BFCA382C2623B84B00CDF56B /* PopOver.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCA382D2623B84B00CDF56B /* Base */,
+			);
+			name = PopOver.storyboard;
+			sourceTree = "<group>";
+		};
+		BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCA384E2623BC1E00CDF56B /* Base */,
+			);
+			name = SpellingBee.storyboard;
+			sourceTree = "<group>";
+		};
 		EF36DE16261D5B0A00F7E5EE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
