@@ -10,7 +10,7 @@ import UIKit
 class PopUpVC: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
-    
+    private var selectedItems: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,7 +39,8 @@ extension PopUpVC: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("You tapped me")
+        print("You tapped me at \(indexPath)")
+        
     }
     
 }
