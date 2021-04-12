@@ -50,7 +50,7 @@ class SpellingBeeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.navigationItem.title = "Stationery"
         let labelsList = [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!,animatedLabels12!,animatedLabels13!,animatedLabels14!]
         
         soundButtonOutlet.alpha = 0.5

@@ -13,6 +13,9 @@
         <array key="Baloo2-Medium.ttf">
             <string>Baloo2-Medium</string>
         </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Pop UpVC-->
@@ -127,6 +130,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPR-zP-5lo">
+                                <rect key="frame" x="326" y="864" width="155" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Randomizer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xkO-IG-1sO" kind="show" identifier="randomizer" id="XKL-Bb-qUI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLU-0j-4kv">
+                                <rect key="frame" x="710" y="863" width="158" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Spelling Bee">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jKb-uZ-HcH" kind="show" identifier="spellingBee" id="682-ca-giM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -169,7 +194,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGX-3s-nZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="579"/>
+            <point key="canvasLocation" x="962" y="520"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dw2-OS-A9u">
@@ -196,6 +221,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFN-YV-IN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647.5841874084917" y="113.67187499999999"/>
+        </scene>
+        <!--Randomizer-->
+        <scene sceneID="G5L-Bg-BdI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Randomizer" id="xkO-IG-1sO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hdg-sb-3Vh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCJ-GG-VLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="520"/>
         </scene>
     </scenes>
     <resources>

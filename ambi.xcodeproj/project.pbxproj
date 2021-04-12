@@ -19,6 +19,8 @@
 		BF65669B2623F4AD00EFF624 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566992623F4AD00EFF624 /* PopUpVC.xib */; };
 		BF6566A12623F4CD00EFF624 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */; };
 		BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */; };
+		BF6566B02623FB9100EFF624 /* Randomizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */; };
+		BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */; };
 		BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA382C2623B84B00CDF56B /* PopOver.storyboard */; };
 		BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */; };
 		BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */; };
@@ -72,6 +74,8 @@
 		BF6566992623F4AD00EFF624 /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
 		BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Randomizer.storyboard; sourceTree = "<group>"; };
+		BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerViewController.swift; sourceTree = "<group>"; };
 		BFCA382D2623B84B00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ambi/Base.lproj/PopOver.storyboard; sourceTree = "<group>"; };
 		BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
 				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
 				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
+				BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */,
+				BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */,
 				BF65669F2623F4CD00EFF624 /* MyCollectionViewCell.swift */,
 				BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */,
 				BFCA38592623CD3E00CDF56B /* Emitter.swift */,
@@ -330,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6566B02623FB9100EFF624 /* Randomizer.storyboard in Resources */,
 				BF6566882623ED9C00EFF624 /* Baloo2-Regular.ttf in Resources */,
 				BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */,
 				BF6566872623ED9C00EFF624 /* OFL.txt in Resources */,
@@ -373,6 +380,7 @@
 				EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */,
 				EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */,
 				BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */,
+				BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */,
 				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
 				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
 				BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */,

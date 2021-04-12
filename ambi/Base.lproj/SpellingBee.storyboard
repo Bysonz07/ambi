@@ -148,6 +148,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="xQ8-yI-VqD"/>
                     <connections>
                         <outlet property="animatedLabels1" destination="C3r-6F-d7z" id="qNy-jF-zOf"/>
                         <outlet property="animatedLabels10" destination="GvL-2P-KBW" id="025-fb-1k7"/>
@@ -171,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19.765739385065885" y="78.515625"/>
+            <point key="canvasLocation" x="713.76281112737911" y="78.515625"/>
         </scene>
     </scenes>
     <resources>
