@@ -10,7 +10,7 @@ import AVFoundation
 
 class AmbiBrain{
     
-    var musicPlayer : AVAudioPlayer!
+    
 
     //movement
     func animateMovement(_ layer : CALayer) {
@@ -29,8 +29,8 @@ class AmbiBrain{
     //opacity
     func animateOpacity(_ layer : CALayer) {
         let animation = CABasicAnimation(keyPath: "opacity")
-        animation.fromValue = 1
-        animation.toValue = 0
+        animation.fromValue = 0
+        animation.toValue = 1
         animation.duration = 2
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation.fillMode = CAMediaTimingFillMode.forwards
@@ -52,11 +52,11 @@ class AmbiBrain{
         layer.add(animation, forKey: nil)
     }
     
-//    func playSound(musicName: String , musicExtension: String = "mp3") {
-//        let url = Bundle.main.url(forResource: musicName, withExtension: musicExtension)
-//        musicPlayer = try! AVAudioPlayer(contentsOf: url!)
-//        musicPlayer.play()
-//    }
+    func playSound(musicName: String , musicExtension: String = "mp3") {
+        let url = Bundle.main.url(forResource: musicName, withExtension: musicExtension)
+        spellPlayer = try! AVAudioPlayer(contentsOf: url!)
+        spellPlayer.play()
+    }
     
     func animateText(text : String = "Cingcaripit",selectedLabel : UILabel) {
         selectedLabel.text = ""
@@ -128,7 +128,7 @@ class AmbiBrain{
         
         for i in 0...listOfLabels.count - 1 {
             listOfLabels[i].text = ""
-            listOfLabels[i].font = UIFont.systemFont(ofSize: 70)
+            listOfLabels[i].font = UIFont(name: "Baloo2-Bold", size: 70)
         }
         
         for i in 0...listOfCharacters.count - 1 {
@@ -142,6 +142,7 @@ class AmbiBrain{
     func juglingText(text : String, listOfLabels : [UILabel]!) {
         let listOfCharacters = Array(text)
         let animation = CABasicAnimation(keyPath: "transform.scale")
+        var musicName1 : String
 
         
         animation.fromValue = 1
@@ -153,8 +154,12 @@ class AmbiBrain{
         
         for i in 0...listOfCharacters.count - 1 {
             listOfLabels[i].layer.add(animation, forKey: nil)
+            musicName1 = "audio" + String(listOfCharacters[i]).capitalized
+            playSound(musicName: musicName1)
             RunLoop.current.run(until: Date()+1)
         }
+        
+        playSound(musicName: "audio" + String(text).capitalized)
         
     }
     

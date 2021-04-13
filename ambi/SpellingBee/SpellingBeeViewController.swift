@@ -8,10 +8,12 @@
 import UIKit
 import AVFoundation
 
+var spellPlayer : AVAudioPlayer!
+
 class SpellingBeeViewController: UIViewController {
 
     
-    var musicPlayer : AVAudioPlayer!
+    var spellPlayer : AVAudioPlayer!
     var brain = AmbiBrain()
     let text = "Pencil"
 
@@ -30,9 +32,9 @@ class SpellingBeeViewController: UIViewController {
     @IBOutlet weak var animatedLabels9: UILabel!
     @IBOutlet weak var animatedLabels10: UILabel!
     @IBOutlet weak var animatedLabels11: UILabel!
-    @IBOutlet weak var animatedLabels12: UILabel!
-    @IBOutlet weak var animatedLabels13: UILabel!
-    @IBOutlet weak var animatedLabels14: UILabel!
+//    @IBOutlet weak var animatedLabels12: UILabel!
+//    @IBOutlet weak var animatedLabels13: UILabel!
+//    @IBOutlet weak var animatedLabels14: UILabel!
     
 
     
@@ -40,7 +42,7 @@ class SpellingBeeViewController: UIViewController {
         soundButtonOutlet.isEnabled = false
         soundButtonOutlet.alpha = 0.5
 //        self.brain.playSound(musicName: "earworm", musicExtension: "mp3")
-        self.brain.juglingText(text: text, listOfLabels: [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!,animatedLabels12!,animatedLabels13!,animatedLabels14!])
+        self.brain.juglingText(text: text, listOfLabels: [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!])
         soundButtonOutlet.isEnabled = true
         soundButtonOutlet.alpha = 1
     }
@@ -51,16 +53,17 @@ class SpellingBeeViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Stationery"
-        let labelsList = [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!,animatedLabels12!,animatedLabels13!,animatedLabels14!]
+        let labelsList = [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!]
         
         soundButtonOutlet.alpha = 0.5
         soundButtonOutlet.isEnabled = false
         
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now()+1) { [self] in
             
 //            brain.playSound(musicName: "earworm", musicExtension: "mp3")
- 
+// 
             brain.animateScale(apreciationStars)
 
             brain.animateImageSequence(image1: "Pencil01.png", image2: "Pencil02.png", image3: "Pencil03.png", image4: "Pencil02.png", image5: "Pencil01.png", uiImageView: gifAnimation1)
@@ -72,9 +75,21 @@ class SpellingBeeViewController: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) { [self] in
-            brain.juglingText(text: text, listOfLabels: labelsList)
-            soundButtonOutlet.alpha = 1
-            soundButtonOutlet.isEnabled = true
+            let defaults = UserDefaults.standard
+            if defaults.value(forKey: "spellState") != nil{
+                       let switchON: Bool = defaults.value(forKey: "spellState")  as! Bool
+                       if switchON == true{
+                        brain.juglingText(text: text, listOfLabels: labelsList)
+                        soundButtonOutlet.alpha = 1
+                        soundButtonOutlet.isEnabled = true
+                       }
+                       else if switchON == false{
+                        
+                       }
+                   }
+//            brain.juglingText(text: text, listOfLabels: labelsList)
+//            soundButtonOutlet.alpha = 1
+//            soundButtonOutlet.isEnabled = true
         }
         
         //emitter bg

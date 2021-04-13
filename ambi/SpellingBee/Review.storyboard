@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qan-I7-3aJ">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review Controller-->
+        <scene sceneID="vP8-WG-5kS">
+            <objects>
+                <viewController title="Review Controller" id="Qan-I7-3aJ" customClass="ReviewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q2Q-NV-qC3">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QXV-aR-Z3y">
+                                <rect key="frame" x="83" y="216" width="1185" height="566"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otw-Fu-WmV">
+                                <rect key="frame" x="1274" y="20" width="72" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="bubarjalan"/>
+                                <connections>
+                                    <action selector="bubarJalan:" destination="Qan-I7-3aJ" eventType="touchUpInside" id="JSN-ci-9Zh"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vqC-Pw-4AY">
+                                <rect key="frame" x="83" y="357" width="1185" height="425"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="acb-by-JYW">
+                                    <size key="itemSize" width="184" height="204"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="Ahz-nX-QyC" customClass="ReviewCollectionViewCell" customModule="ambi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="204"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Zb-vI-vkU">
+                                            <rect key="frame" x="0.0" y="0.0" width="184" height="204"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crayon" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-uP-sqt">
+                                                    <rect key="frame" x="8" y="17" width="168" height="162"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4Se-uP-sqt" secondAttribute="trailing" constant="8" id="0eW-XF-f6f"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Se-uP-sqt" secondAttribute="bottom" constant="25" id="A8Y-mk-S2U"/>
+                                                <constraint firstItem="4Se-uP-sqt" firstAttribute="leading" secondItem="2Zb-vI-vkU" secondAttribute="leading" constant="8" id="JRN-5W-T0I"/>
+                                                <constraint firstItem="4Se-uP-sqt" firstAttribute="top" secondItem="2Zb-vI-vkU" secondAttribute="top" constant="17" id="eXy-Q5-bRz"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="184" height="204"/>
+                                        <connections>
+                                            <outlet property="reviewImageView" destination="4Se-uP-sqt" id="4F6-gS-XeB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qan-I7-3aJ" id="RPC-cI-Ldj"/>
+                                    <outlet property="delegate" destination="Qan-I7-3aJ" id="MYw-OJ-YE1"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review Time!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWT-F2-YHW">
+                                <rect key="frame" x="388" y="172" width="591" height="99"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-y9-FkQ">
+                                <rect key="frame" x="647" y="790" width="72" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="skip"/>
+                                <connections>
+                                    <action selector="bubarJalan:" destination="Qan-I7-3aJ" eventType="touchUpInside" id="xPA-wc-Uoi"/>
+                                    <action selector="skipToCongrats:" destination="Qan-I7-3aJ" eventType="touchUpInside" id="ZlV-Ld-0rg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J2z-2e-y5a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J2z-2e-y5a" firstAttribute="trailing" secondItem="vWT-F2-YHW" secondAttribute="trailing" id="4yc-ct-1X5"/>
+                            <constraint firstItem="vqC-Pw-4AY" firstAttribute="top" secondItem="vWT-F2-YHW" secondAttribute="bottom" constant="86" id="Brk-78-Djb"/>
+                            <constraint firstItem="J2z-2e-y5a" firstAttribute="trailing" secondItem="vqC-Pw-4AY" secondAttribute="trailing" constant="98" id="POk-4W-X9P"/>
+                            <constraint firstItem="vWT-F2-YHW" firstAttribute="leading" secondItem="J2z-2e-y5a" secondAttribute="leading" id="gGl-ik-2ZY"/>
+                            <constraint firstItem="vqC-Pw-4AY" firstAttribute="leading" secondItem="J2z-2e-y5a" secondAttribute="leading" constant="83" id="hpo-PH-oek"/>
+                            <constraint firstItem="vqC-Pw-4AY" firstAttribute="top" secondItem="J2z-2e-y5a" secondAttribute="top" constant="357" id="q9T-5S-Ku1"/>
+                            <constraint firstItem="J2z-2e-y5a" firstAttribute="bottom" secondItem="vqC-Pw-4AY" secondAttribute="bottom" constant="222" id="s09-L2-5q8"/>
+                            <constraint firstItem="vWT-F2-YHW" firstAttribute="top" secondItem="J2z-2e-y5a" secondAttribute="top" constant="150" id="vot-cD-ez0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NfF-uy-tW8"/>
+                    <connections>
+                        <outlet property="labeltester2" destination="vWT-F2-YHW" id="HZd-9C-Jnm"/>
+                        <outlet property="outletImageCongrats" destination="QXV-aR-Z3y" id="foP-6d-01B"/>
+                        <outlet property="outletLabelTester2" destination="otw-Fu-WmV" id="UsS-9V-bkT"/>
+                        <outlet property="outletReviewCollection" destination="vqC-Pw-4AY" id="NwE-l6-Zqb"/>
+                        <outlet property="outletSkipToCongrats" destination="hZ3-y9-FkQ" id="csR-lm-guv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKw-py-j0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.9736456808198" y="78.515625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="crayon" width="151" height="283"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

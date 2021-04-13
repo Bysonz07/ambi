@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var homeCollectionView: UICollectionView!
     
+    
+    
     func stopSound() {
             
             musicPlayer = try! AVAudioPlayer(contentsOf: url!)
@@ -89,6 +91,7 @@ extension ViewController: UICollectionViewDelegate{
 //        else if indexPath.item == 3{
 //            performSegue(withIdentifier: "Modality", sender: nil)
 //        }
+        performSegue(withIdentifier: "randomizer", sender: nil)
         
     }
     

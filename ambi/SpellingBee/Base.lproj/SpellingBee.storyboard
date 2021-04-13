@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="center" misplaced="YES" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="y0P-tT-i0Q">
-                                <rect key="frame" x="307" y="551" width="752" height="50"/>
+                                <rect key="frame" x="307" y="551" width="590" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3r-6F-d7z">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -93,24 +93,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxw-xd-Tit" userLabel="label12">
-                                        <rect key="frame" x="594" y="0.0" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afI-vU-cSv" userLabel="label13">
-                                        <rect key="frame" x="648" y="0.0" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-oD-pYI" userLabel="label14">
-                                        <rect key="frame" x="702" y="0.0" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" alignment="center"/>
                             </stackView>
@@ -132,6 +114,18 @@
                                 <rect key="frame" x="267" y="487" width="287" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dds-rq-eCl">
+                                <rect key="frame" x="645" y="865" width="76" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Skip" image="forward.end" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8LE-Bi-U3W" kind="show" id="eOh-0T-pEC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -153,9 +147,6 @@
                         <outlet property="animatedLabels1" destination="C3r-6F-d7z" id="qNy-jF-zOf"/>
                         <outlet property="animatedLabels10" destination="GvL-2P-KBW" id="025-fb-1k7"/>
                         <outlet property="animatedLabels11" destination="a9u-ys-0pz" id="gSt-ig-79d"/>
-                        <outlet property="animatedLabels12" destination="wxw-xd-Tit" id="Guq-rV-DKx"/>
-                        <outlet property="animatedLabels13" destination="afI-vU-cSv" id="T6k-mO-LZ9"/>
-                        <outlet property="animatedLabels14" destination="k8L-oD-pYI" id="Cxe-ss-txb"/>
                         <outlet property="animatedLabels2" destination="VFp-Qv-hMQ" id="BeN-Fe-5cf"/>
                         <outlet property="animatedLabels3" destination="OtO-QE-GxY" id="umn-ak-Tn5"/>
                         <outlet property="animatedLabels4" destination="WbR-oc-KuM" id="0y1-eO-qMg"/>
@@ -174,10 +165,21 @@
             </objects>
             <point key="canvasLocation" x="713.76281112737911" y="78.515625"/>
         </scene>
+        <!--Review-->
+        <scene sceneID="BzZ-lD-3oj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Review" id="8LE-Bi-U3W" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IlS-ub-C7b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yi-Cc-T67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="491"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TextSpellPlaceHolder" width="810" height="278"/>
         <image name="bintanggoodjob" width="783" height="405"/>
+        <image name="forward.end" catalog="system" width="128" height="120"/>
         <image name="simbolSuara" width="81" height="76"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

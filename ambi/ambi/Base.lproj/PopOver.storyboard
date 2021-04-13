@@ -232,6 +232,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6x-Xi-tdI">
                                                     <rect key="frame" x="350" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="actionSpell:" destination="5o3-he-3Ky" eventType="valueChanged" id="ndj-Tv-qzF"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -352,6 +355,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Playtime" id="n5M-AX-ZvY"/>
                     <connections>
+                        <outlet property="spellingSwitch" destination="O6x-Xi-tdI" id="wMk-BO-a7j"/>
                         <outlet property="stepperItemsPerRound" destination="f8p-sT-ZOx" id="B7A-J6-Vk8"/>
                         <outlet property="stepperWaktuPerRound" destination="bYL-j0-hac" id="9np-rq-dD6"/>
                         <outlet property="totalItemsPerRound" destination="XT9-mE-gBD" id="eSX-Dy-ZQy"/>

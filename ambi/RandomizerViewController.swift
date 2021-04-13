@@ -10,8 +10,13 @@ import UIKit
 class RandomizerViewController: UIViewController {
 
     @IBOutlet var imageRandom: UIImageView!
+    @IBOutlet weak var randomButton: UIButton!
+    @IBOutlet weak var goButton: UIButton!
     
     @IBOutlet weak var randomGetLabel: UILabel!
+    
+    var brain = AmbiBrain()
+    var isCellSelected = false
     
     let imageNames = ["Book", "Brush", "Crayon", "Eraser", "Glue", "Highlighter", "Paper", "Pen", "Pencil", "Ruler", "Sharpener", "Tape"];
     
@@ -20,6 +25,8 @@ class RandomizerViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Stationery"
         
+        //button visibility
+        goButton.isHidden = true
         //emitter
         subtleAnimate()
         
@@ -37,10 +44,23 @@ class RandomizerViewController: UIViewController {
         imageRandom.image = UIImage (named: imageNames[number]);
         imageRandom.layer.cornerRadius = 12
         randomGetLabel.text = imageNames[number]
+        isCellSelected.toggle()
+        
+        if isCellSelected{
+            goButton.isHidden = false
+            randomButton.isHidden = true
+        }
         
     }
     
 
+    @IBAction func goTapped(_ sender: Any) {
+        performSegue(withIdentifier: "timer", sender: nil)
+    }
+    
+    @IBAction func unWindToRandom(_ sender:UIStoryboardSegue){
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -9,9 +9,14 @@ import UIKit
 
 class PlaytimeTableViewController: UITableViewController {
 
+    //stepper item
     @IBOutlet weak var stepperItemsPerRound: UIStepper!
     @IBOutlet weak var totalItemsPerRound: UILabel!
     
+//    Switch spelling Bee
+    @IBOutlet weak var spellingSwitch: UISwitch!
+    
+    //stepper waktu
     @IBOutlet weak var totalWaktuPerRound: UILabel!
     @IBOutlet weak var stepperWaktuPerRound: UIStepper!
     
@@ -21,7 +26,7 @@ class PlaytimeTableViewController: UITableViewController {
 //            UIView.layoutFittingCompressedSize
 //        )
 //    }
-    
+    var spellState = "spellState"
     
     override func viewWillAppear(_ animated: Bool) {
         print(#function)
@@ -34,6 +39,10 @@ class PlaytimeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let defaults = UserDefaults.standard
+        let keadaanSpelling = defaults.bool(forKey: spellState)
+        //spelling switch
+        spellingSwitch.isOn = keadaanSpelling
+        spellingSwitch.isOn = defaults.bool(forKey: spellState)
         
         // ini stepper item
         stepperItemsPerRound.value = defaults.double(forKey: "BanyakItem")
@@ -55,6 +64,23 @@ class PlaytimeTableViewController: UITableViewController {
     }
     
     
+    @IBAction func actionSpell(_ sender: UISwitch) {
+        let defaults = UserDefaults.standard
+        if spellingSwitch.isOn {
+            
+            print("Play Spell")
+//            spellPlayer.play()
+            print("SpellState \(String(describing: defaults.value(forKey: spellState)))")
+        }
+        else {
+            print("Pause Spell")
+//            spellPlayer.pause()
+            print("SpellState \(defaults.value(forKey: spellState) ?? spellState)")
+        }
+        
+        
+        defaults.set(spellingSwitch.isOn, forKey: spellState)
+    }
     // MARK: - Table view data source
     func banyakItemsPerRound () {
         let itemsPerRound = String(format: "%.0f", stepperItemsPerRound.value)

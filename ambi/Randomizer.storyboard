@@ -26,9 +26,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-or-LTr">
-                                <rect key="frame" x="634" y="626" width="100" height="60"/>
+                                <rect key="frame" x="589" y="626" width="184" height="60"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Random">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -42,13 +42,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Te-qa8">
+                                <rect key="frame" x="660" y="626" width="45" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSR-e5-NSM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SiK-or-LTr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="634" id="9Ea-vR-atQ"/>
+                            <constraint firstItem="SiK-or-LTr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="589" id="9Ea-vR-atQ"/>
                             <constraint firstItem="SiK-or-LTr" firstAttribute="top" secondItem="h2Z-D1-Swc" secondAttribute="bottom" constant="79" id="Cet-bi-NxX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SiK-or-LTr" secondAttribute="trailing" constant="632" id="KAh-Rp-rmS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SiK-or-LTr" secondAttribute="trailing" constant="593" id="KAh-Rp-rmS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h2Z-D1-Swc" secondAttribute="trailing" constant="488" id="dCP-TO-N1Z"/>
                             <constraint firstItem="h2Z-D1-Swc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="488" id="eCQ-LS-V0g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SiK-or-LTr" secondAttribute="bottom" constant="318" id="eF9-MZ-7ch"/>
@@ -65,13 +76,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="EjZ-tA-2dN"/>
                     <connections>
+                        <outlet property="goButton" destination="Oaq-Te-qa8" id="Kxq-qg-auI"/>
                         <outlet property="imageRandom" destination="h2Z-D1-Swc" id="Haj-QF-S5N"/>
+                        <outlet property="randomButton" destination="SiK-or-LTr" id="IIX-57-wXx"/>
                         <outlet property="randomGetLabel" destination="9X7-JI-8Ac" id="vhx-Mg-bHn"/>
+                        <segue destination="BeF-po-SXs" kind="show" identifier="timer" id="CLg-wd-xG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713.32357247437767" y="93.1640625"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="Cqc-vB-I5U">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timer" id="BeF-po-SXs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bIN-Il-DrH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfa-jo-Lh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="93"/>
         </scene>
     </scenes>
     <resources>
