@@ -5,6 +5,7 @@
 //  Created by Jehnsen Hirena Kane on 10/04/21.
 //
 
+
 import UIKit
 
 class ReviewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -15,9 +16,10 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var labeltester2: UILabel!
     var brain = AmbiBrain()
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
-    var items = ["crayon", "notes", "pencil", "penggares", "penghapus"]
-    var listOfImageString = ["crayon","notes","pencil", "penggares", "penghapus", "simbolSuara"]
+    var items = ["crayon", "Book", "Pencil", "Ruler", "Eraser"]
+    var listOfImageString = ["Crayon","Book","Pencil", "Ruler", "Eraser"]
     var listOfImages : [UIImage] = []
+    var textArray : [String] = []
     
    
     
@@ -25,6 +27,14 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         brain.animateOpacity(outletReviewCollection.layer)
         inputImage()
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 200, height: 200)
+        outletReviewCollection.collectionViewLayout = layout
+        outletReviewCollection.backgroundColor = .clear
+        outletReviewCollection.delegate = self
+        outletReviewCollection.dataSource = self
+        outletReviewCollection.allowsMultipleSelection = true
     }
     
     
@@ -62,6 +72,21 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         print("You selected cell #\(indexPath.item)!")
         labeltester2.text = listOfImageString[indexPath.item]
         print(listOfImageString[indexPath.item])
+        
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.red
+        textArray.append(listOfImageString[indexPath.item])
+        print(textArray)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
+        textArray = textArray.filter { $0 != listOfImageString[indexPath.item] }
+        print(textArray)
     }
     
     // change background color when user touches cell
@@ -99,4 +124,10 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         brain.animateScale(outletImageCongrats.layer)
     }
     
+}
+
+extension ReviewController {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: 200)
+    }
 }

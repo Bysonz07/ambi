@@ -78,9 +78,10 @@ class ViewController: UIViewController {
  
             brain.animateScale(apreciationStars)
 
-            brain.animateImageSequence(image1: "penghapus.png", image2: "crayon.png", image3: "pencil", image4: "penggares", image5: "notes", uiImageView: gifAnimation1)
+            brain.animateImageSequence(image1: "Glue.png", image2: "Highlighter.png", image3: "Pencil", image4: "Ruler", image5: "Tape", uiImageView: gifAnimation1)
+//            ["Glue", "Highlighter", "Pencil", "Ruler", "Tape"]
             
-            brain.animateImageSequence(image1: "penghapus.png", image2: "crayon.png", image3: "pencil", image4: "penggares", image5: "notes", uiImageView: gifAnimation2)
+            brain.animateImageSequence(image1: "Glue.png", image2: "Highlighter.png", image3: "Pencil", image4: "Ruler", image5: "Tape", uiImageView: gifAnimation2)
             
             brain.clearJuglingText(text: text, listOfLabels: labelsList)
             
