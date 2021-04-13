@@ -7,9 +7,17 @@
 
 import UIKit
 
-class PopUpVC: UIViewController {
+class PopUpVC: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet var collectionView: UICollectionView!
+    
+    @IBOutlet weak var buttonRandom: UIButton!
+    @IBOutlet weak var buttonOke: UIButton!
+    
+    var dataCard = ["Book","Brush","Crayon","Eraser","Glue","Highlighter","Paper","Pen","Pencil","Ruler","Sharpener","Tape"]
+    
+    var textArray : [String] = []
+    
     private var selectedItems: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +31,13 @@ class PopUpVC: UIViewController {
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.allowsMultipleSelection = true
         
+        //button customize
+        buttonOke.layer.cornerRadius = 20
+        buttonRandom.layer.cornerRadius = 20
+        buttonRandom.layer.borderColor = UIColor.white.cgColor
+        buttonRandom.layer.borderWidth = 5
     }
     
     @IBAction func closePopup(_ sender: Any) {
@@ -31,21 +45,63 @@ class PopUpVC: UIViewController {
     }
     
     
-    
-
-}
-
-extension PopUpVC: UICollectionViewDelegate{
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        print("You tapped me at \(indexPath)")
-//        let cell = collectionView.cellForItem(at: <#T##IndexPath#>) //This return UICollectionView Cell you need to type cast it
-        // After you have the access to the cell, you can do whatever you want
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+//        labeltester2.text = listOfImageString[indexPath.item]
+        print(dataCard[indexPath.item])
+        
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = UIColor.red.cgColor
+        cell?.layer.borderWidth = 5
+        cell?.layer.cornerRadius = 12
+        textArray.append(dataCard[indexPath.item])
+        print(textArray)
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = UIColor.clear.cgColor
+        textArray = textArray.filter { $0 != dataCard[indexPath.item] }
+        print(textArray)
+    }
+
 }
+
+//extension PopUpVC: UICollectionViewDelegate{
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        collectionView.deselectItem(at: indexPath, animated: true)
+////        print("You tapped me at \(indexPath)")
+////        let cell = collectionView.cellForItem(at: <#T##IndexPath#>) //This return UICollectionView Cell you need to type cast it
+//        // After you have the access to the cell, you can do whatever you want
+//
+//        print("You selected cell #\(indexPath.item)!")
+////        labeltester2.text = listOfImageString[indexPath.item]
+//        print(dataCard[indexPath.item])
+//
+//        //append select
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        cell?.backgroundColor = UIColor.red
+//        textArray.append(dataCard[indexPath.item])
+//        print(textArray)
+//
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        cell?.backgroundColor = UIColor.clear
+//        textArray = textArray.filter { $0 != dataCard[indexPath.item] }
+//        print(textArray)
+//    }
+//
+//
+//}
 
 extension PopUpVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -55,7 +111,7 @@ extension PopUpVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
         
-        let dataCard = ["Book","Brush","Crayon","Eraser","Glue","Highlighter","Paper","Pen","Pencil","Ruler","Sharpener","Tape"]
+        
          for data in indexPath{
             cell.configure(with: UIImage(named: dataCard[data])!, item: dataCard[data])
              

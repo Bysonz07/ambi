@@ -107,7 +107,7 @@ extension ViewController: UICollectionViewDataSource{
         
        let dataCard = ["Colors","Stationery","Shapes"]
         for data in indexPath{
-            cell.configure(with: UIImage(named: dataCard[data])!, and: dataCard[data])
+            cell.configure(with: UIImage(named: dataCard[data])!,and: dataCard[data])
         }
         cell.onMoreButtonClick = {
             self.performSegue(withIdentifier: "Modality", sender: nil)

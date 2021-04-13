@@ -1,16 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "stationeryv2.png",
+      "filename" : "crayon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "stationeryv2@2x.png",
+      "filename" : "crayon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "crayon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

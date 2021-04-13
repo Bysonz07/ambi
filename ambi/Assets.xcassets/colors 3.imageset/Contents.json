@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "colorsv2.png",
+      "filename" : "colors.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "colorsv2@2x.png",
+      "filename" : "colors@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

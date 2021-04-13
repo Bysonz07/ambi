@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Timer View Controller-->
+        <!--tEts-->
         <scene sceneID="Tpv-7G-wib">
             <objects>
                 <viewController id="GuI-fv-MPz" customClass="TimerViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +88,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="rEe-Fr-C4b"/>
+                    <navigationItem key="navigationItem" title="tEts" id="rg6-Ub-1JO">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="GEb-xh-CUc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="countdownLabel" destination="4M3-f3-mQE" id="qOO-la-1Gy"/>
                         <outlet property="gifAnimation1" destination="ULS-md-JZ9" id="8zW-Yw-scj"/>
@@ -102,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ut3-AU-WkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964.714494875549" y="101.3671875"/>
+            <point key="canvasLocation" x="3352.7086383601754" y="101.3671875"/>
         </scene>
         <!--SpellingBee-->
         <scene sceneID="dIz-gt-1Pg">
@@ -112,7 +114,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7Y-Ci-yNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="101"/>
+            <point key="canvasLocation" x="3767.7891654465589" y="100.78125"/>
         </scene>
     </scenes>
     <resources>
