@@ -34,7 +34,7 @@ class TimerViewController: UIViewController {
     var preparer = 4
     var resumeTapped = false
     var itemName = String()
-    
+    var brain = AmbiBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +105,11 @@ class TimerViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attrs
         
         // animate
-        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation1)
-        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation2)
+
+        brain.animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", image4: "\(itemNames[indexImage])02", image5: "\(itemNames[indexImage])01", uiImageView: gifAnimation1)
+        brain.animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", image4: "\(itemNames[indexImage])02", image5: "\(itemNames[indexImage])01", uiImageView: gifAnimation2)
+//        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation1)
+//        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation2)
         
     }
     
@@ -117,8 +120,10 @@ class TimerViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVc = segue.destination as! SpellingBeeViewController
-        destVc.indexImages = indexImage
+        if let destVc = segue.destination as? SpellingBeeViewController {
+            destVc.indexImages = indexImage
+        }
+        
     }
     
     //progress bar
@@ -276,21 +281,21 @@ class TimerViewController: UIViewController {
     @IBAction func nextTapped(_ sender: Any) {
         performSegue(withIdentifier: "spellingBee", sender: nil)
     }
-    func animateImageSequence(image1 : String = "Pencil01.png", image2 : String = "Pencil02.png", image3 : String = "Pencil03.png", uiImageView : UIImageView) {
-            var animatedImage1 : UIImage!
-            var animatedImage2 : UIImage!
-            var animatedImage3 : UIImage!
-            var animatedImages : [UIImage]!
-            var animatedImageFix: UIImage!
-            
-            animatedImage1 = UIImage (named: image1)
-            animatedImage2 = UIImage (named: image2)
-            animatedImage3 = UIImage (named: image3)
-    //        animatedImage2 = animatedImage1.withHorizontallyFlippedOrientation()
-            animatedImages = [animatedImage1, animatedImage2, animatedImage3]
-            animatedImageFix = UIImage.animatedImage(with: animatedImages, duration: 2.0)
-            uiImageView.image = animatedImageFix
-    }
+//    func animateImageSequence(image1 : String = "Pencil01.png", image2 : String = "Pencil02.png", image3 : String = "Pencil03.png", uiImageView : UIImageView) {
+//            var animatedImage1 : UIImage!
+//            var animatedImage2 : UIImage!
+//            var animatedImage3 : UIImage!
+//            var animatedImages : [UIImage]!
+//            var animatedImageFix: UIImage!
+//
+//            animatedImage1 = UIImage (named: image1)
+//            animatedImage2 = UIImage (named: image2)
+//            animatedImage3 = UIImage (named: image3)
+//    //        animatedImage2 = animatedImage1.withHorizontallyFlippedOrientation()
+//            animatedImages = [animatedImage1, animatedImage2, animatedImage3]
+//            animatedImageFix = UIImage.animatedImage(with: animatedImages, duration: 2.0)
+//            uiImageView.image = animatedImageFix
+//    }
 
     func subtleAnimate(){
         let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)

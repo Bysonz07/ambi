@@ -14,7 +14,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var labeltester2: UILabel!
     var brain = AmbiBrain()
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
-    var items = ["crayon", "Book", "Pencil", "Ruler", "Eraser"]
+//    var items = ["crayon", "Book", "Highlighter", "Ruler", "Eraser"]
     var listOfImageString = ["Crayon","Book","Pencil", "Ruler", "Eraser"]
     var listOfImages : [UIImage] = []
     
@@ -22,6 +22,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spellPlayer.stop()
         brain.animateOpacity(outletReviewCollection.layer)
         inputImage()
         
@@ -115,6 +116,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         outletImageCongrats.image = UIImage (named: "congrats.png")
         
         brain.animateScale(outletImageCongrats.layer)
+        
     }
     
     func subtleAnimate(){

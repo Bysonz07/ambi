@@ -70,6 +70,19 @@ class AmbiBrain{
         spellPlayer.play()
     }
     
+    func playLotterySound(musicName: String , musicExtension: String = "mp3") {
+        let url = Bundle.main.url(forResource: musicName, withExtension: musicExtension)
+        spellPlayer = try! AVAudioPlayer(contentsOf: url!)
+        spellPlayer.numberOfLoops = 15
+        spellPlayer.play()
+    }
+    
+    func stopSound(musicName: String , musicExtension: String = "mp3") {
+        let url = Bundle.main.url(forResource: musicName, withExtension: musicExtension)
+        spellPlayer = try! AVAudioPlayer(contentsOf: url!)
+        spellPlayer.stop()
+    }
+    
     func animateText(text : String = "Cingcaripit",selectedLabel : UILabel) {
         selectedLabel.text = ""
         for char in text {

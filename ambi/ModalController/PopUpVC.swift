@@ -7,6 +7,7 @@
 
 import UIKit
 
+var isCell: Bool = true
 class PopUpVC: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet var collectionView: UICollectionView!
@@ -50,16 +51,12 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     //IBAction
     @IBAction func buttonRandomAction(_ sender: Any) {
         cardChosen = 0
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "randomizerVc") as! RandomizerViewController
-//
-//        vc.modalPresentationStyle = .fullScreen
-//
-//        self.present(vc, animated: true, completion: nil)
+        performSegue(withIdentifier: "randomizer", sender: nil)
     }
     
     @IBAction func buttonOkeAction(_ sender: Any) {
         cardChosen = 1
-//        performSegue(withIdentifier: "defRandomizer", sender: nil)
+       performSegue(withIdentifier: "randomizer", sender: nil)
     }
     
     @IBAction func closePopup(_ sender: Any) {
@@ -68,53 +65,50 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVc = segue.destination as! RandomizerViewController
-        destVc.imageChosen = textArray
-        destVc.pathChosen = cardChosen
+        if let destVc = segue.destination as? RandomizerViewController{
+            destVc.imageChosen = textArray
+            destVc.pathChosen = cardChosen
+        }
+        
     }
     
     //select collection view
-    var totalItem = 0
-    var tItem_Now = 0
+//    var totalItem = 0
+//    var tItem_Now = 0
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
 //        labeltester2.text = listOfImageString[indexPath.item]
         print(dataCard[indexPath.item])
         
-        totalItem = defaults.value(forKey: "LamaWaktu") as! Int
-        if tItem_Now < totalItem {
+        
+        if textArray.count < defaults.value(forKey: "BanyakItem") as! Int {
             let cell = collectionView.cellForItem(at: indexPath)
-            cell?.layer.borderColor = UIColor.red.cgColor
-            cell?.layer.borderWidth = 5
-            cell?.layer.cornerRadius = 12
+            isCell = true
+//            cell?.layer.borderWidth = 5
+//            cell?.layer.cornerRadius = 12
             textArray.append(dataCard[indexPath.item])
             print(textArray)
             
-        } else {
-            tItem_Now = 0
         }
-        tItem_Now += 1
-        print("Total item = \(tItem_Now)")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
-        totalItem = defaults.value(forKey: "LamaWaktu") as! Int
-        if tItem_Now < totalItem {
+        
+        if textArray.count <= defaults.value(forKey: "BanyakItem") as! Int {
             print("deSelected cell #\(indexPath.item)!")
+            isCell = false
             let cell = collectionView.cellForItem(at: indexPath)
             cell?.layer.borderColor = UIColor.clear.cgColor
             textArray = textArray.filter { $0 != dataCard[indexPath.item] }
             print(textArray)
             
-        } else if tItem_Now < 0 {
-            tItem_Now = 0
         }
-        tItem_Now -= 1
-        print("Total item = \(tItem_Now)")
+       
     }
 
+    
 }
 
 //Mark: - Extension
@@ -131,6 +125,11 @@ extension PopUpVC: UICollectionViewDataSource{
             cell.configure(with: UIImage(named: dataCard[data])!, item: dataCard[data])
              
          }
+        
+//        cell.onStampClick(is: isCell)
+            
+        
+        
         return cell
     }
     

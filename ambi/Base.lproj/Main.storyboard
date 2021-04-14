@@ -23,7 +23,7 @@
             <objects>
                 <viewController storyboardIdentifier="popVc" id="03M-JV-otC" customClass="PopUpVC" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IFs-2K-Ymq" customClass="gradientView" customModule="ambi" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2G-it-n8a">
@@ -57,7 +57,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUh-Vh-mXM">
                                 <rect key="frame" x="647" y="25" width="25" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="xmark.circle" catalog="system" symbolScale="large"/>
                                 </state>
@@ -76,7 +76,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonOkeAction:" destination="03M-JV-otC" eventType="touchUpInside" id="tPu-lb-CyY"/>
-                                    <segue destination="QXx-Gm-dJT" kind="show" identifier="chosenRandomizer" id="C6P-tA-Lgz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-fC-qrp">
@@ -88,7 +87,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonRandomAction:" destination="03M-JV-otC" eventType="touchUpInside" id="XfY-sd-h0O"/>
-                                    <segue destination="QXx-Gm-dJT" kind="show" identifier="defRandomizer" id="13D-nf-80i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,10 +94,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                <color key="value" red="0.023529411760000001" green="0.69019607839999997" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.4549019608" green="0.54901960780000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                <color key="value" red="0.0039215686269999999" green="0.41441776629999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.34509803919999998" green="0.72941176470000002" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -107,6 +105,7 @@
                         <outlet property="buttonOke" destination="Fi1-bd-gzU" id="GG0-6T-t43"/>
                         <outlet property="buttonRandom" destination="K0i-fC-qrp" id="Ifh-Qp-NWe"/>
                         <outlet property="collectionView" destination="T2G-it-n8a" id="ltI-kA-bCe"/>
+                        <segue destination="QXx-Gm-dJT" kind="show" identifier="randomizer" id="Kt9-fz-hLD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-xy-g44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,7 +179,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JLi-aE-Cty" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZx-9u-iuK">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -221,9 +219,6 @@
             <point key="canvasLocation" x="706" y="516"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="13D-nf-80i"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
@@ -232,9 +227,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

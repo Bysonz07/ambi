@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1XB-Vv-xlz">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--Spelling Bee View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpellingBeeViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SpellingBeeViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="gradientView" customModule="ambi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8LE-Bi-U3W" kind="show" id="eOh-0T-pEC"/>
+                                    <action selector="skipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXD-6f-wx8"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5F8-aO-WzR">
@@ -174,12 +174,13 @@
                         <outlet property="gifAnimation1" destination="eVJ-ug-TTJ" id="v1v-mu-Kz5"/>
                         <outlet property="gifAnimation2" destination="5F8-aO-WzR" id="xhj-qf-TZl"/>
                         <outlet property="soundButtonOutlet" destination="8WH-LF-pz9" id="OdA-91-Ntf"/>
+                        <segue destination="8LE-Bi-U3W" kind="show" identifier="review" id="Cw0-H1-2K9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Ue0-pb-BJS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1407.3206442166909" y="78.515625"/>
+            <point key="canvasLocation" x="2101.3177159590041" y="78.515625"/>
         </scene>
         <!--PopOver-->
         <scene sceneID="FeD-Af-TUM">
@@ -187,7 +188,7 @@
                 <viewControllerPlaceholder storyboardName="PopOver" id="KMk-pN-4pq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFs-As-eoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="-214"/>
+            <point key="canvasLocation" x="2470.7174231332356" y="-214.453125"/>
         </scene>
         <!--Review-->
         <scene sceneID="BzZ-lD-3oj">
@@ -198,6 +199,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yi-Cc-T67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408" y="488"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dPx-Yo-6J0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="1XB-Vv-xlz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D3M-h9-gSf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0ZO-XK-126"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eis-ch-bSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407.3206442166909" y="78.515625"/>
         </scene>
     </scenes>
     <resources>

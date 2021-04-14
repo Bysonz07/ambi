@@ -110,6 +110,13 @@ class SpellingBeeViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
     
+    
+    @IBAction func skipAction(_ sender: Any) {
+        brain.stopSound(musicName: "audio" + String(text).capitalized)
+        performSegue(withIdentifier: "review", sender: nil)
+    }
+    
+    
     func subtleAnimate(){
         let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)
         emitter.emitterPosition = CGPoint(x: view.frame.width/4, y: view.frame.height)

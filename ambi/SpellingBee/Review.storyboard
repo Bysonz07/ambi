@@ -131,7 +131,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKw-py-j0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="R7D-ye-C0l" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1539.5314787701316" y="78.515625"/>
+            <point key="canvasLocation" x="2233.5285505124448" y="78.515625"/>
         </scene>
         <!--PopOver-->
         <scene sceneID="Mpq-v0-VZb">
@@ -139,7 +139,7 @@
                 <viewControllerPlaceholder storyboardName="PopOver" id="GXR-Xi-p1F" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Typ-9j-Qic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-214"/>
+            <point key="canvasLocation" x="2604.685212298682" y="-214.453125"/>
         </scene>
     </scenes>
     <resources>
