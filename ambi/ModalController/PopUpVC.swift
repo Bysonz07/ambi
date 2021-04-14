@@ -75,22 +75,36 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     }
     
     //select collection view
-//    var totalItem = 0
-//    var tItem_Now = 0
+    let strokeFalseTextAttributes = [
+      NSAttributedString.Key.strokeColor : UIColor.white,
+      NSAttributedString.Key.foregroundColor : UIColor.blue,
+      NSAttributedString.Key.strokeWidth : -6.0
+      ]
+      as [NSAttributedString.Key : Any]
+    
+    let strokeTrueTextAttributes = [
+      NSAttributedString.Key.strokeColor : UIColor.blue,
+      NSAttributedString.Key.foregroundColor : UIColor.white,
+      NSAttributedString.Key.strokeWidth : -6.0
+      ]
+      as [NSAttributedString.Key : Any]
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
 //        labeltester2.text = listOfImageString[indexPath.item]
         print(dataCard[indexPath.item])
-        
+
         
         
         if textArray.count < defaults.value(forKey: "BanyakItem") as! Int {
-            let cell = collectionView.cellForItem(at: indexPath)
+            let cell = collectionView.cellForItem(at: indexPath) as? MyCollectionViewCell
 //            isCell = true
 //            cell?.layer.borderWidth = 5
 //            cell?.layer.cornerRadius = 12
-            let bell = collectionView.layoutAttributesForItem(at: indexPath)
+            cell?.imageView.layer.borderWidth = 3
+            cell?.imageView.layer.borderColor = UIColor.blue.cgColor
+            cell?.stampFill.isHidden = false
+            
             textArray.append(dataCard[indexPath.item])
             print(textArray)
             
@@ -106,6 +120,11 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
         
         if textArray.count <= defaults.value(forKey: "BanyakItem") as! Int {
             print("deSelected cell #\(indexPath.item)!")
+            let cell = collectionView.cellForItem(at: indexPath) as? MyCollectionViewCell
+            cell?.stampFill.isHidden = true
+            cell?.imageView.layer.borderWidth = 3
+            cell?.imageView.layer.borderColor = UIColor.clear.cgColor
+            
 //            isCell = false
 //            let cell = collectionView.cellForItem(at: indexPath)
 //            cell?.layer.borderColor = UIColor.clear.cgColor

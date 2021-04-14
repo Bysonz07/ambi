@@ -11,7 +11,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var reviewImageView: UIImageView!
     var listOfImageString = ["penggares.png","pencil.png","crayon.png", "notes.png", "penghapus.png"]
-    
+    static let identifier = "reviewCell"
 //    override init(frame : CGRect) {
 //        super.init(frame: frame)
 //        contentView.addSubview(reviewImageView)

@@ -38,6 +38,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         brain.animateOpacity(outletReviewCollection.layer)
         inputImage()
         
+       
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 200, height: 200)
@@ -77,7 +78,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // get a reference to our storyboard cell
-        let reviewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ReviewCollectionViewCell
+        let reviewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ReviewTimeCollectionViewCell.identifier, for: indexPath as IndexPath) as! ReviewTimeCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         reviewCell.reviewImageView.image = self.listOfImages[indexPath.row] // The row value is the same as the index of the desired text within the array.

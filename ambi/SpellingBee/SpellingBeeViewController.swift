@@ -136,12 +136,12 @@ class SpellingBeeViewController: UIViewController {
         stopRound += text!
     }
     
-    @IBAction func nextAction(_ sender: Any) {
+    @IBAction func nextAction(_ sender: UIButton) {
 //        dismiss(animated: true, completion: nil)
         
         performSegue(withIdentifier: "randomizer", sender: nil)
     }
-    @IBAction func skipAction(_ sender: Any) {
+    @IBAction func skipAction(_ sender: UIButton) {
         
         performSegue(withIdentifier: "review", sender: nil)
     }

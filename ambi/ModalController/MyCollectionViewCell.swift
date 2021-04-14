@@ -53,8 +53,9 @@ class MyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        stampFill.isHidden = false
-        onStampClick(is: true)
+        stampFill.isHidden = true
+//        onStampClick(is: true)
+        itemName.attributedText = NSMutableAttributedString(string: itemName.text!, attributes: strokeTextAttributes)
         }
     
     public func configure(with image: UIImage, item: String){ //dequeing
@@ -62,7 +63,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 12
         imageView.backgroundColor = .white
         itemName.text = item
-        itemName.attributedText = NSMutableAttributedString(string: item, attributes: strokeTextAttributes)
+        
     }
     
     static func nib() -> UINib {

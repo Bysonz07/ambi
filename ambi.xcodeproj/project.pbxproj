@@ -74,6 +74,8 @@
 		BFCA384F2623BC1E00CDF56B /* SpellingBee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */; };
 		BFCA38552623BC3300CDF56B /* AmbiBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38542623BC3300CDF56B /* AmbiBrain.swift */; };
 		BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38592623CD3E00CDF56B /* Emitter.swift */; };
+		BFCD9A2A262752C0000B1199 /* ReviewTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD9A28262752C0000B1199 /* ReviewTimeCollectionViewCell.swift */; };
+		BFCD9A2B262752C0000B1199 /* ReviewTimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCD9A29262752C0000B1199 /* ReviewTimeCollectionViewCell.xib */; };
 		EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D06912620891900C03AD5 /* AboutViewController.swift */; };
 		EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1D069626208A5E00C03AD5 /* RatingViewController.swift */; };
 		EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB479B9F261FF4C60059FCCB /* GradientViewController.swift */; };
@@ -175,6 +177,8 @@
 		BFCA384E2623BC1E00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SpellingBee.storyboard; sourceTree = "<group>"; };
 		BFCA38542623BC3300CDF56B /* AmbiBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbiBrain.swift; sourceTree = "<group>"; };
 		BFCA38592623CD3E00CDF56B /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		BFCD9A28262752C0000B1199 /* ReviewTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFCD9A29262752C0000B1199 /* ReviewTimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTimeCollectionViewCell.xib; sourceTree = "<group>"; };
 		EB1D06912620891900C03AD5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EB1D069626208A5E00C03AD5 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		EB479B9F261FF4C60059FCCB /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 			children = (
 				BF4E77B7262512150096C6A2 /* ReviewCollectionViewCell.swift */,
 				BF4E77B8262512150096C6A2 /* ReviewController.swift */,
+				BFCD9A28262752C0000B1199 /* ReviewTimeCollectionViewCell.swift */,
+				BFCD9A29262752C0000B1199 /* ReviewTimeCollectionViewCell.xib */,
 				BF4E77A4262505660096C6A2 /* Review.storyboard */,
 				BFCA38482623BC1100CDF56B /* SpellingBeeViewController.swift */,
 				BFCA384D2623BC1E00CDF56B /* SpellingBee.storyboard */,
@@ -536,6 +542,7 @@
 				BF4E780B262535770096C6A2 /* audioSharpener.mp3 in Resources */,
 				BF6566892623ED9C00EFF624 /* Baloo2-Medium.ttf in Resources */,
 				BF4E7805262535770096C6A2 /* audioK.mp3 in Resources */,
+				BFCD9A2B262752C0000B1199 /* ReviewTimeCollectionViewCell.xib in Resources */,
 				BF4E77F9262535770096C6A2 /* audioB.mp3 in Resources */,
 				BF4E7811262535770096C6A2 /* audioRuler.mp3 in Resources */,
 				BF4E7815262535770096C6A2 /* audioH.mp3 in Resources */,
@@ -596,6 +603,7 @@
 				BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */,
 				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
 				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
+				BFCD9A2A262752C0000B1199 /* ReviewTimeCollectionViewCell.swift in Sources */,
 				BF78D33F2625DB3D00B54C43 /* Card.swift in Sources */,
 				BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */,
 				EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */,
