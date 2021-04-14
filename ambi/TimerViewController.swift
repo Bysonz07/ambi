@@ -14,6 +14,7 @@ class TimerViewController: UIViewController {
     lazy var displayLink = CADisplayLink(target: self, selector: #selector(runCountdown))
     lazy var dlPrepare = CADisplayLink(target: self, selector: #selector(runPreparation))
     var indexImage = 0
+    var nextRound = 0
     
     //Preparation Time
     @IBOutlet weak var playTimeLabel: UILabel!
@@ -122,6 +123,7 @@ class TimerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVc = segue.destination as? SpellingBeeViewController {
             destVc.indexImages = indexImage
+            destVc.nextRound = nextRound
         }
         
     }

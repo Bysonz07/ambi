@@ -23,7 +23,7 @@
             <objects>
                 <viewController storyboardIdentifier="popVc" id="03M-JV-otC" customClass="PopUpVC" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IFs-2K-Ymq" customClass="gradientView" customModule="ambi" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T2G-it-n8a">
@@ -101,6 +101,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="bUF-w1-4Ak"/>
                     <connections>
                         <outlet property="buttonOke" destination="Fi1-bd-gzU" id="GG0-6T-t43"/>
                         <outlet property="buttonRandom" destination="K0i-fC-qrp" id="Ifh-Qp-NWe"/>
@@ -110,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-xy-g44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862.66471449487551" y="-713.0859375"/>
+            <point key="canvasLocation" x="1555.7833089311857" y="-713.0859375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -165,7 +166,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="homeCollectionView" destination="DVo-h3-fGE" id="prb-oi-xar"/>
-                        <segue destination="03M-JV-otC" kind="presentation" identifier="Modality" id="Up4-DP-s7I"/>
+                        <segue destination="pmM-CN-M2M" kind="presentation" identifier="Modality" id="Up4-DP-s7I"/>
                         <segue destination="xkO-IG-1sO" kind="show" identifier="randomizer" id="N4T-RD-ciw"/>
                     </connections>
                 </viewController>
@@ -179,6 +180,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JLi-aE-Cty" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZx-9u-iuK">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -198,7 +200,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkc-ap-Ubm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="-713"/>
+            <point key="canvasLocation" x="1980.9663250366032" y="-713.0859375"/>
         </scene>
         <!--PopOver-->
         <scene sceneID="KpK-f3-1aU">
@@ -217,6 +219,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCJ-GG-VLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706" y="516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H6r-JB-4ya">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pmM-CN-M2M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zia-h2-paG">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="03M-JV-otC" kind="relationship" relationship="rootViewController" id="Ed5-c5-lQn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXc-SB-OUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862.66471449487551" y="-713.0859375"/>
         </scene>
     </scenes>
     <resources>

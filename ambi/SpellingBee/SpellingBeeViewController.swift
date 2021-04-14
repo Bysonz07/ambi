@@ -12,12 +12,16 @@ var spellPlayer : AVAudioPlayer!
 
 class SpellingBeeViewController: UIViewController {
 
-    
+    let defaults = UserDefaults.standard
     var spellPlayer : AVAudioPlayer!
     var brain = AmbiBrain()
     var indexImages = 0
+    var nextRound = 0
     let text = "Pencil"
-
+    var imageChosen : [String] = []
+    
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var soundButtonOutlet: UIButton!
     @IBOutlet weak var gifAnimation1: UIImageView!
     @IBOutlet weak var gifAnimation2: UIImageView!
@@ -52,7 +56,17 @@ class SpellingBeeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(nextRound)
         //get passing data
+        if nextRound >= defaults.value(forKey: "BanyakItem") as! Int{
+            skipButton.isHidden = false
+            nextButton.isHidden = true
+        } else {
+            skipButton.isHidden = true
+            nextButton.isHidden = false
+        }
+        
         let text = itemNames[indexImages]
         print("text: \(text)")
         
@@ -86,6 +100,8 @@ class SpellingBeeViewController: UIViewController {
                         brain.juglingText(text: text, listOfLabels: labelsList)
                         soundButtonOutlet.alpha = 1
                         soundButtonOutlet.isEnabled = true
+                        nextButton.alpha = 1
+                        nextButton.isEnabled = true
                        }
                        else if switchON == false{
                         
@@ -111,11 +127,24 @@ class SpellingBeeViewController: UIViewController {
     }
     
     
+    @IBAction func nextAction(_ sender: Any) {
+        performSegue(withIdentifier: "randomizer", sender: nil)
+    }
     @IBAction func skipAction(_ sender: Any) {
-        brain.stopSound(musicName: "audio" + String(text).capitalized)
+        
         performSegue(withIdentifier: "review", sender: nil)
     }
     
+    //segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVc = segue.destination as? RandomizerViewController{
+            destVc.stop = nextRound + 1 
+            destVc.imageNames = imageChosen.filter{$0 == text}
+        }
+        if let destVc = segue.destination as? ReviewController{
+            destVc.imageChosen = imageChosen
+        }
+    }
     
     func subtleAnimate(){
         let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)

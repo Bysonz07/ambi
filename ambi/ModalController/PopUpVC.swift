@@ -65,10 +65,10 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVc = segue.destination as? RandomizerViewController{
-            destVc.imageChosen = textArray
-            destVc.pathChosen = cardChosen
-        }
+        if segue.destination is RandomizerViewController {
+                let destVc = segue.destination as? RandomizerViewController
+            destVc?.pathChosen = cardChosen
+            }
         
     }
     
@@ -83,8 +83,8 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
         
         
         if textArray.count < defaults.value(forKey: "BanyakItem") as! Int {
-            let cell = collectionView.cellForItem(at: indexPath)
-            isCell = true
+//            let cell = collectionView.cellForItem(at: indexPath)
+//            isCell = true
 //            cell?.layer.borderWidth = 5
 //            cell?.layer.cornerRadius = 12
             textArray.append(dataCard[indexPath.item])
@@ -98,9 +98,9 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
         
         if textArray.count <= defaults.value(forKey: "BanyakItem") as! Int {
             print("deSelected cell #\(indexPath.item)!")
-            isCell = false
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.layer.borderColor = UIColor.clear.cgColor
+//            isCell = false
+//            let cell = collectionView.cellForItem(at: indexPath)
+//            cell?.layer.borderColor = UIColor.clear.cgColor
             textArray = textArray.filter { $0 != dataCard[indexPath.item] }
             print(textArray)
             

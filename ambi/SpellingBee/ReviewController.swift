@@ -16,6 +16,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
 //    var items = ["crayon", "Book", "Highlighter", "Ruler", "Eraser"]
     var listOfImageString = ["Crayon","Book","Pencil", "Ruler", "Eraser"]
+    var imageChosen : [String] = []
     var listOfImages : [UIImage] = []
     
    
@@ -80,6 +81,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        brain.playSound(musicName: "audio\(listOfImageString[indexPath.item])")
         labeltester2.text = listOfImageString[indexPath.item]
         print(listOfImageString[indexPath.item])
     }

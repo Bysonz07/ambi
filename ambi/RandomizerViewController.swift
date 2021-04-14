@@ -20,7 +20,7 @@ class RandomizerViewController: UIViewController {
     var stop = 0
     
     lazy var displayLink = CADisplayLink(target: self, selector: #selector(randoming))
-//    lazy var dpSound = CADisplayLink(target: self, selector: #selector(randomingSound))
+
     var imageNames = itemNames
     var imageChosen : [String] = []
     var loopRound = 0
@@ -54,6 +54,12 @@ class RandomizerViewController: UIViewController {
         randomButton.layer.backgroundColor = UIColor.white.cgColor
         randomButton.layer.cornerRadius = 12
         
+        //imageView
+        imageItems.layer.backgroundColor = UIColor.systemTeal.cgColor
+        imageItems.layer.borderWidth = 10
+        imageItems.layer.cornerRadius = 70
+        imageItems.layer.borderColor = UIColor.white.cgColor
+        
         self.navigationItem.title = "Stationery"
         
         let attrs = [
@@ -63,25 +69,21 @@ class RandomizerViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
 
-    @objc func randomingSound(){
-//        brain.playSound(musicName: "LotterSound")
-       
-//        dpSound.preferredFramesPerSecond = 0
-        
-    }
     
     @objc func randoming() -> Int{
+//        print(pathChosen)
 //        brain.playSound(musicName: "LotterSound")
-        if pathChosen == 1 {
-            
-                numbers = Int (arc4random_uniform(UInt32(imageChosen.count)))
-                imageItems.image = UIImage(named: imageChosen[numbers])
-            
-            
-        } else {
+//        if pathChosen == 1 {
+//
+//                numbers = Int (arc4random_uniform(UInt32(imageChosen.count)))
+//                imageItems.image = UIImage(named: imageChosen[numbers])
+//
+//
+//        }
+//        else {
             numbers = Int (arc4random_uniform(12))
             imageItems.image = UIImage (named: imageNames[numbers])
-        }
+//        }
 //        displayLink.preferredFramesPerSecond = 1
         imageItems.layer.cornerRadius = 12
         return numbers
@@ -89,7 +91,7 @@ class RandomizerViewController: UIViewController {
     
     
     @IBAction func randomAction(_ sender: Any) {
-        stop = 1
+        stop += 1
         brain.stopSound(musicName: "LotterSound")
         brain.playSound(musicName: "SelectedDingSound")
         
@@ -109,9 +111,10 @@ class RandomizerViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TimerViewController {
-                let destVc = segue.destination as? TimerViewController
-                destVc?.indexImage = numbers
-            }
+            let destVc = segue.destination as? TimerViewController
+            destVc?.indexImage = numbers
+            destVc?.nextRound = stop
+        }
 //        if let destVc = segue.destination as? TimerViewController{
 //            destVc.indexImage = numbers
 //        }
