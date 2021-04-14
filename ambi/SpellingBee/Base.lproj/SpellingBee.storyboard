@@ -126,6 +126,18 @@
                                 <rect key="frame" x="786" y="486" width="397" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyp-eZ-rni">
+                                <rect key="frame" x="645" y="865" width="80" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Next" image="forward.end" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mtx-Fe-xIQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -173,14 +185,27 @@
                         <outlet property="apreciationStars" destination="EMg-Mn-bhq" id="lwn-rI-gML"/>
                         <outlet property="gifAnimation1" destination="eVJ-ug-TTJ" id="v1v-mu-Kz5"/>
                         <outlet property="gifAnimation2" destination="5F8-aO-WzR" id="xhj-qf-TZl"/>
+                        <outlet property="nextButton" destination="Vyp-eZ-rni" id="ONV-eO-zOk"/>
+                        <outlet property="skipButton" destination="Dds-rq-eCl" id="Glm-2M-egR"/>
                         <outlet property="soundButtonOutlet" destination="8WH-LF-pz9" id="OdA-91-Ntf"/>
                         <segue destination="8LE-Bi-U3W" kind="show" identifier="review" id="Cw0-H1-2K9"/>
+                        <segue destination="fJA-Me-19o" kind="show" identifier="randomizer" id="qYp-8E-uVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Ue0-pb-BJS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2101.3177159590041" y="78.515625"/>
+        </scene>
+        <!--Randomizer-->
+        <scene sceneID="TtC-og-Ptz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Randomizer" id="fJA-Me-19o" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CVz-p7-vri"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25u-52-jIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="497"/>
         </scene>
         <!--PopOver-->
         <scene sceneID="FeD-Af-TUM">
