@@ -13,16 +13,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Storyboard Reference-->
-        <scene sceneID="UGG-9Z-ibp">
-            <objects>
-                <viewControllerPlaceholder id="J4U-4t-lK5" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0bx-xU-Tq7"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fZq-Du-lu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2531" y="-294"/>
-        </scene>
         <!--Randomizer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -31,17 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-D1-Swc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-D1-Swc">
                                 <rect key="frame" x="429" y="342" width="508" height="319"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-JI-8Ac">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-JI-8Ac">
                                 <rect key="frame" x="516" y="245" width="316" height="79"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-or-LTr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-or-LTr">
                                 <rect key="frame" x="582" y="714" width="184" height="60"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
                                 <state key="normal" title="Stop!">
@@ -51,7 +41,7 @@
                                     <action selector="randomAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFx-Ph-qZ1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Te-qa8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Te-qa8">
                                 <rect key="frame" x="622" y="720" width="111" height="60"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
                                 <state key="normal" title="Go!">
@@ -65,19 +55,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="SiK-or-LTr" secondAttribute="bottom" constant="217" id="7o8-dU-esc"/>
-                            <constraint firstItem="SiK-or-LTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="582" id="7uI-DH-aYS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Oaq-Te-qa8" secondAttribute="bottom" constant="211" id="7zO-vh-Uhl"/>
-                            <constraint firstItem="9X7-JI-8Ac" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="278" id="8TH-Qz-6yd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SiK-or-LTr" secondAttribute="bottom" constant="230" id="7o8-dU-esc"/>
+                            <constraint firstItem="SiK-or-LTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="562" id="7uI-DH-aYS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Oaq-Te-qa8" secondAttribute="bottom" constant="224" id="7zO-vh-Uhl"/>
+                            <constraint firstItem="9X7-JI-8Ac" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="245" id="8TH-Qz-6yd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h2Z-D1-Swc" secondAttribute="trailing" constant="409" id="Gry-zW-0UU"/>
                             <constraint firstItem="h2Z-D1-Swc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="409" id="LnY-4y-kuw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Oaq-Te-qa8" secondAttribute="trailing" constant="633" id="MFx-iS-TTg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oaq-Te-qa8" secondAttribute="trailing" constant="613" id="MFx-iS-TTg"/>
                             <constraint firstItem="9X7-JI-8Ac" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="516" id="NhF-BK-vGH"/>
                             <constraint firstItem="SiK-or-LTr" firstAttribute="top" secondItem="h2Z-D1-Swc" secondAttribute="bottom" constant="53" id="U1j-IV-hSw"/>
                             <constraint firstAttribute="trailing" secondItem="9X7-JI-8Ac" secondAttribute="trailing" constant="534" id="Vff-LQ-iwF"/>
                             <constraint firstItem="h2Z-D1-Swc" firstAttribute="top" secondItem="9X7-JI-8Ac" secondAttribute="bottom" constant="18" id="Xjr-Yi-dtP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SiK-or-LTr" secondAttribute="trailing" constant="600" id="f9d-Kc-0H2"/>
-                            <constraint firstItem="Oaq-Te-qa8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="622" id="hb3-D0-D2v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SiK-or-LTr" secondAttribute="trailing" constant="580" id="f9d-Kc-0H2"/>
+                            <constraint firstItem="Oaq-Te-qa8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="602" id="hb3-D0-D2v"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">

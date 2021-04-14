@@ -150,12 +150,12 @@ extension PopUpVC: UICollectionViewDelegateFlowLayout{ //let specify what is the
 //      }
       
       // 4
-      func collectionView(
-        _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        minimumLineSpacingForSectionAt section: Int
-      ) -> CGFloat {
-        return sectionInsets.bottom
-      }
+//      func collectionView(
+//        _ collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        minimumLineSpacingForSectionAt section: Int
+//      ) -> CGFloat {
+//        return sectionInsets.bottom
+//      }
     
 }

@@ -13,6 +13,11 @@ let url = Bundle.main.url(forResource: "bgmusik", withExtension: "mp3")
 
 class ViewController: UIViewController {
     
+    private let sectionInsets = UIEdgeInsets(
+      top: 50.0,
+      left: 20.0,
+      bottom: 20.0,
+      right: 20.0)
     
     
     @IBOutlet var homeCollectionView: UICollectionView!
@@ -130,6 +135,14 @@ extension ViewController: UICollectionViewDelegateFlowLayout{ //let specify what
         
         return CGSize(width: 500, height: 500)
     }
+    
+//    func collectionView(
+//        _ collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        insetForSectionAt section: Int
+//      ) -> UIEdgeInsets {
+//        return sectionInsets
+//      }
     
 }
 

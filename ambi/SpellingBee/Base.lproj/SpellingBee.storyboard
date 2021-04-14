@@ -142,8 +142,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="y0P-tT-i0Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="2Ms-dL-aHF"/>
-                            <constraint firstItem="y0P-tT-i0Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9UQ-ME-okc"/>
+                            <constraint firstItem="y0P-tT-i0Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="64" id="2Ms-dL-aHF"/>
+                            <constraint firstItem="y0P-tT-i0Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-81" id="9UQ-ME-okc"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
