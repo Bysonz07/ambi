@@ -13,9 +13,12 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var outletSkipToCongrats: UIButton!
     @IBOutlet weak var labeltester2: UILabel!
     var brain = AmbiBrain()
+    let defaults = UserDefaults.standard
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
 //    var items = ["crayon", "Book", "Highlighter", "Ruler", "Eraser"]
-    var listOfImageString = ["Crayon","Book","Pencil", "Ruler", "Eraser"]
+//    var listOfImageString = ["Crayon","Book","Pencil", "Ruler", "Eraser"]
+    var itemList = itemOutlineNames
+    var listOfImageString : [String] = []
     var imageChosen : [String] = []
     var listOfImages : [UIImage] = []
     
@@ -23,9 +26,15 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Card.stopRonde = 0
+//        for i in Card.nameChosen{
+//            Card.nameChosen.filter{$0 != i}
+//        }
+        listOfImageString = Card.nameChosen
         spellPlayer.stop()
         brain.animateOpacity(outletReviewCollection.layer)
         inputImage()
+        
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 200, height: 200)
@@ -48,9 +57,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     
-    @IBAction func bubarJalan(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
     
     @IBAction func skipToCongrats(_ sender: UIButton) {
         brain.animateOpacityToZero(outletReviewCollection.layer)
@@ -102,7 +109,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
 //        listOfImages = [(UIImage (named: listOfImageString[0]))]
         
             for i in 0...listOfImageString.count - 1 {
-                listOfImages.append(UIImage (named: listOfImageString[i])!)
+                listOfImages.append(UIImage (named: listOfImageString[i]+"Outline")!)
             }
     }
     

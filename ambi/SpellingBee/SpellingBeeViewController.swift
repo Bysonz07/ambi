@@ -19,6 +19,7 @@ class SpellingBeeViewController: UIViewController {
     var nextRound = 0
     let text = "Pencil"
     var imageChosen : [String] = []
+    var stopRound = 0
     
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -52,14 +53,15 @@ class SpellingBeeViewController: UIViewController {
         soundButtonOutlet.alpha = 1
     }
     
-    
+    var stoper = Card.stopRonde
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(nextRound)
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("sended"), object: nil)
+               
+        Card.stopRonde += 1
         //get passing data
-        if nextRound >= defaults.value(forKey: "BanyakItem") as! Int{
+        if stoper >= defaults.value(forKey: "BanyakItem") as! Int{
             skipButton.isHidden = false
             nextButton.isHidden = true
         } else {
@@ -126,8 +128,15 @@ class SpellingBeeViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
     
+    @objc func didGetNotification(_ notification: Notification){
+        let text = notification.object as! Int?
+//        print(text)
+        stopRound += text!
+    }
     
     @IBAction func nextAction(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+        
         performSegue(withIdentifier: "randomizer", sender: nil)
     }
     @IBAction func skipAction(_ sender: Any) {
@@ -138,7 +147,7 @@ class SpellingBeeViewController: UIViewController {
     //segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVc = segue.destination as? RandomizerViewController{
-            destVc.stop = nextRound + 1 
+            destVc.stop = stopRound + 1
             destVc.imageNames = imageChosen.filter{$0 == text}
         }
         if let destVc = segue.destination as? ReviewController{

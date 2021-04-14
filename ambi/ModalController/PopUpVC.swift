@@ -50,12 +50,14 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     
     //IBAction
     @IBAction func buttonRandomAction(_ sender: Any) {
-        cardChosen = 0
+        Card.pathChosen = 0
+        Card.userChosen = textArray
         performSegue(withIdentifier: "randomizer", sender: nil)
     }
     
     @IBAction func buttonOkeAction(_ sender: Any) {
-        cardChosen = 1
+        Card.pathChosen = 1
+        Card.userChosen = textArray
        performSegue(withIdentifier: "randomizer", sender: nil)
     }
     

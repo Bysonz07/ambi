@@ -19,6 +19,8 @@ class RandomizerViewController: UIViewController {
     var brain = AmbiBrain()
     var stop = 0
     
+    
+    
     lazy var displayLink = CADisplayLink(target: self, selector: #selector(randoming))
 
     var imageNames = itemNames
@@ -27,6 +29,9 @@ class RandomizerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Card.userChosen)
+        //        dismiss(animated: true, completion: nil)
         // Do any additional setup after loading the view.
         displayLink.add(to: .main, forMode: .default)
 //        dpSound.add(to: .main, forMode: .default)
@@ -43,7 +48,7 @@ class RandomizerViewController: UIViewController {
 //            }
 //        }
         
-//        brain.playLotterySound(musicName: "LotterSound")
+        brain.playLotterySound(musicName: "LotterSound")
         // test
         
         //button
@@ -73,17 +78,17 @@ class RandomizerViewController: UIViewController {
     @objc func randoming() -> Int{
 //        print(pathChosen)
 //        brain.playSound(musicName: "LotterSound")
-//        if pathChosen == 1 {
-//
-//                numbers = Int (arc4random_uniform(UInt32(imageChosen.count)))
-//                imageItems.image = UIImage(named: imageChosen[numbers])
-//
-//
-//        }
-//        else {
+        if Card.pathChosen == 1 {
+
+            numbers = Int (arc4random_uniform(UInt32(Card.userChosen.count)))
+            imageItems.image = UIImage(named: Card.userChosen[numbers])
+
+
+        }
+        else {
             numbers = Int (arc4random_uniform(12))
             imageItems.image = UIImage (named: imageNames[numbers])
-//        }
+        }
 //        displayLink.preferredFramesPerSecond = 1
         imageItems.layer.cornerRadius = 12
         return numbers
@@ -98,14 +103,19 @@ class RandomizerViewController: UIViewController {
         displayLink.isPaused = true
 //        dpSound.isPaused = true
         getItemName.text = "\(imageNames[numbers])"
+        Card.nameChosen.append("\(imageNames[numbers])")
         goButton.isHidden = false
         randomButton.isHidden = true
     }
     
     @IBAction func goAction(_ sender: Any) {
-//        NotificationCenter.default.post(name: Notification.Name("randomV"), object: numbers)
-        print("Pass Number : \(numbers)")
+
+//        print("Pass Number : \(numbers)")
+//        performSegue(withIdentifier: "timer", sender: nil)
+        NotificationCenter.default.post(name: Notification.Name("sended"), object: stop)
+        
         performSegue(withIdentifier: "timer", sender: nil)
+//        dismiss(animated: true, completion: nil)dismiss(animated: true, completion: nil)
     }
     
     
@@ -115,9 +125,6 @@ class RandomizerViewController: UIViewController {
             destVc?.indexImage = numbers
             destVc?.nextRound = stop
         }
-//        if let destVc = segue.destination as? TimerViewController{
-//            destVc.indexImage = numbers
-//        }
 
     }
     
