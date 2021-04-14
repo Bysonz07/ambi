@@ -57,7 +57,7 @@ class PlaytimeTableViewController: UITableViewController {
         
     }
 
-    @IBAction func actionTotalItemsPerRound(_ sender: UIStepper) { banyakItemsPerRound()
+    @IBAction func actionTotalItemsPerRound(_ sender: UIStepper) { banyakItemsPerRound() 
     }
     
     @IBAction func actionTotalWaktuPerRound(_ sender: UIStepper) { lamaWaktuPerRound()

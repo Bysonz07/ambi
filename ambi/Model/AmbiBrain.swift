@@ -39,6 +39,18 @@ class AmbiBrain{
         layer.add(animation, forKey: nil)
     }
     
+    func animateOpacityToZero(_ layer : CALayer) {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 1
+        animation.toValue = 0
+        animation.duration = 0.25
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        animation.fillMode = CAMediaTimingFillMode.forwards
+        animation.isRemovedOnCompletion = false
+        animation.beginTime = CACurrentMediaTime()
+        layer.add(animation, forKey: nil)
+    }
+    
     //scaling
     func animateScale(_ layer : CALayer){
         let animation = CABasicAnimation(keyPath: "transform.scale")

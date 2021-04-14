@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--tEts-->
+        <!--Stationery-->
         <scene sceneID="Tpv-7G-wib">
             <objects>
-                <viewController id="GuI-fv-MPz" customClass="TimerViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GuI-fv-MPz" customClass="TimerViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ypW-Mh-N2t" customClass="gradientView" customModule="ambi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,10 +69,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PENCIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-Qo-0DW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PENCIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-Qo-0DW">
                                 <rect key="frame" x="574" y="555" width="218" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playtime Starts in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKz-Jb-g2I">
+                                <rect key="frame" x="413" y="269" width="541" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-kR-BUN">
+                                <rect key="frame" x="131" y="318" width="1093" height="315"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="200"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -88,8 +102,21 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="tEts" id="rg6-Ub-1JO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="GEb-xh-CUc"/>
+                    <navigationItem key="navigationItem" title="Stationery" id="rg6-Ub-1JO">
+                        <barButtonItem key="leftBarButtonItem" title="house" image="house" catalog="system" id="GEb-xh-CUc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Enx-Se-PAx" kind="unwind" unwindAction="unWindToHome:" id="PVR-CZ-DGA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="gear" image="gearshape" catalog="system" id="70D-Z5-HOC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="6gB-dR-g80" kind="popoverPresentation" popoverAnchorBarButtonItem="70D-Z5-HOC" id="YEt-o2-taI">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="countdownLabel" destination="4M3-f3-mQE" id="qOO-la-1Gy"/>
@@ -98,13 +125,24 @@
                         <outlet property="itemLabel" destination="LdE-Qo-0DW" id="XeY-ce-Znh"/>
                         <outlet property="nextButton" destination="hxr-CK-Uxs" id="V0Y-t3-vxh"/>
                         <outlet property="pauseButton" destination="d2T-5t-C6N" id="qK0-XO-FKf"/>
+                        <outlet property="playTimeLabel" destination="SKz-Jb-g2I" id="l3H-4n-k5u"/>
+                        <outlet property="prepareTimeLabel" destination="y2b-kR-BUN" id="ZK9-s0-djp"/>
                         <outlet property="repeatButton" destination="1SN-MF-Hg3" id="TZj-l1-Ufd"/>
                         <segue destination="oSU-WT-NkO" kind="show" identifier="spellingBee" id="qHz-fV-L0S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ut3-AU-WkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Enx-Se-PAx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3352.7086383601754" y="101.3671875"/>
+            <point key="canvasLocation" x="4046.7057101024889" y="101.3671875"/>
+        </scene>
+        <!--PopOver-->
+        <scene sceneID="MhY-eo-3mx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PopOver" id="6gB-dR-g80" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtM-g9-crZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4412" y="-182"/>
         </scene>
         <!--SpellingBee-->
         <scene sceneID="dIz-gt-1Pg">
@@ -114,12 +152,14 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7Y-Ci-yNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767.7891654465589" y="100.78125"/>
+            <point key="canvasLocation" x="4461.7862371888723" y="100.78125"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
         <image name="forward.end" catalog="system" width="128" height="120"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="pause.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

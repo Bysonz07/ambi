@@ -12,7 +12,14 @@ class TimerViewController: UIViewController {
     let trackLayer = CAShapeLayer()
     let shapeLayer = CAShapeLayer()
     lazy var displayLink = CADisplayLink(target: self, selector: #selector(runCountdown))
+    lazy var dlPrepare = CADisplayLink(target: self, selector: #selector(runPreparation))
+    var indexImage = 0
     
+    //Preparation Time
+    @IBOutlet weak var playTimeLabel: UILabel!
+    @IBOutlet weak var prepareTimeLabel: UILabel!
+    
+    //Countdown
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var repeatButton: UIButton!
@@ -22,7 +29,9 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var gifAnimation2: UIImageView!
     
     var timerCountdown = Timer()
-    var counter = 15
+    let defaults = UserDefaults.standard
+    var counter = 0
+    var preparer = 4
     var resumeTapped = false
     var itemName = String()
     
@@ -30,22 +39,86 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // animate
-        animateImageSequence(image1: "PencilOutline.png", uiImageView: gifAnimation1)
-        animateImageSequence(image1: "PencilOutline.png", uiImageView: gifAnimation2)
+        counter = defaults.value(forKey: "LamaWaktu") as! Int
         
-        //progress bar
-        backgroundProgressBar()
-        progressBarRun()
+        
+        //selected
+//        pauseButton.setImage(UIImage.init(systemName: "play.circle.fill"), for: .selected)
+        
+        //initial countdown vis
+        prepareTimeLabel.isHidden = false
+        playTimeLabel.isHidden = false
+        countdownLabel.isHidden = true
+        itemLabel.isHidden = true
+        repeatButton.isHidden = true
+        pauseButton.isHidden = true
+        nextButton.isHidden = true
+        gifAnimation1.isHidden = true
+        gifAnimation2.isHidden = true
+        
+//        //init countdown vis
+//        countdownLabel.isHidden = false
+//        itemLabel.isHidden = false
+//        repeatButton.isHidden = false
+//        pauseButton.isHidden = false
+//        nextButton.isHidden = false
+//        gifAnimation1.isHidden = false
+//        gifAnimation2.isHidden = false
+        
+//        if countdownLabel.isHidden == false{
+//            //progress bar
+//            backgroundProgressBar()
+//            progressBarRun()
+//
+//            // countdown
+//            itemName = "PENCIL"
+//
+//            countdownTimer()
+//            startAnimationProgressBar()
+//
+//
+//        }
         
         // countdown
-        itemName = "PENCIL"
+        itemName = itemNames[indexImage]
         
-        countdownTimer()
-        startAnimationProgressBar()
-        
+        //progress bar
+//        backgroundProgressBar()
+//        progressBarRun()
+//
+//        countdownTimer()
+//        startAnimationProgressBar()
+        prepareTimer()
         //emitter
         subtleAnimate()
+        
+//        //get passing data
+//        NotificationCenter.default.addObserver(self, selector: #selector(getRandom), name: Notification.Name("randomV"), object: nil)
+        
+        //navigation setting
+        self.navigationItem.title = "Stationery"
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Baloo2-Medium", size: 30)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attrs
+        
+        // animate
+        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation1)
+        animateImageSequence(image1: "\(itemNames[indexImage])Outline.png", image2: "\(itemNames[indexImage])02", image3: "\(itemNames[indexImage])03", uiImageView: gifAnimation2)
+        
+    }
+    
+    @objc func getRandom(_ notification: Notification) -> Int{
+        let numbers = notification.object as! Int
+        indexImage = numbers
+        return indexImage
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVc = segue.destination as! SpellingBeeViewController
+        destVc.indexImages = indexImage
     }
     
     //progress bar
@@ -105,6 +178,37 @@ class TimerViewController: UIViewController {
 //        shapeLayer.removeAnimation(forKey: "pauseAnimationProgressBar")
 //    }
     
+    // Preparation
+    @objc private func runPreparation() {
+        preparer -= 1
+        prepareTimeLabel.text = "\(preparer)"
+        
+        
+        if preparer <= 0 {
+            timerCountdown.invalidate()
+            prepareTimeLabel.isHidden = true
+            playTimeLabel.isHidden = true
+            
+            //init countdown vis
+            countdownLabel.isHidden = false
+            itemLabel.isHidden = false
+            repeatButton.isHidden = false
+            pauseButton.isHidden = false
+            nextButton.isHidden = false
+            gifAnimation1.isHidden = false
+            gifAnimation2.isHidden = false
+            
+            //start
+            backgroundProgressBar()
+            progressBarRun()
+            
+            countdownTimer()
+            startAnimationProgressBar()
+//            itemLabel.text = ""
+            dlPrepare.remove(from: .current, forMode: .common)
+        }
+    }
+    
     // countdown
     @objc private func runCountdown() {
         counter -= 1
@@ -117,6 +221,15 @@ class TimerViewController: UIViewController {
             itemLabel.text = ""
             displayLink.remove(from: .current, forMode: .common)
         }
+    }
+    
+    func prepareTimer() {
+        dlPrepare.preferredFramesPerSecond = 1
+        dlPrepare.add(to: .current, forMode: .common)
+        
+        prepareTimeLabel.text = "\(preparer)"
+//        itemLabel.text = itemName
+//        timerCountdown = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runCountdown), userInfo: nil, repeats: true)
     }
     
     func countdownTimer() {
@@ -133,7 +246,7 @@ class TimerViewController: UIViewController {
     // button countdown
     @IBAction func repeatTapped(_ sender: Any) {
         timerCountdown.invalidate()
-        counter = 10
+        counter = defaults.value(forKey: "LamaWaktu") as! Int
         countdownLabel.text = String(counter)
         itemLabel.text = String(itemName)
         countdownTimer()
@@ -143,17 +256,18 @@ class TimerViewController: UIViewController {
         displayLink.add(to: .current, forMode: .common)
     }
     
-    @IBAction func pauseTapped(_ sender: Any) {
+    @IBAction func pauseTapped(_ sender: UIButton) {
         if self.resumeTapped == false {
+            sender.setImage(UIImage.init(systemName: "play.circle.fill"), for: .normal)
             timerCountdown.invalidate()
             self.resumeTapped = true
-//            pauseButton.setImage(UIImage(named: "pause.circle"), for: .normal)
             pauseAnimationProgressBar()
             displayLink.isPaused = true
         } else {
             self.resumeTapped = false
             countdownTimer()
-//            pauseButton.setImage(UIImage(named: "play.circle"), for: .normal)
+            sender.setImage(UIImage.init(systemName: "pause.circle"), for: .normal)
+
             resumeAnimationProgressBar()
             displayLink.isPaused = false
         }

@@ -11,7 +11,6 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var outletReviewCollection: UICollectionView!
     @IBOutlet weak var outletSkipToCongrats: UIButton!
-    @IBOutlet weak var outletLabelTester2: UIButton!
     @IBOutlet weak var labeltester2: UILabel!
     var brain = AmbiBrain()
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
@@ -32,6 +31,18 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         outletReviewCollection.backgroundColor = .clear
         outletReviewCollection.delegate = self
         outletReviewCollection.dataSource = self
+        
+        //emitter
+        subtleAnimate()
+        
+        //navigation setting
+        self.navigationItem.title = "Stationery"
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Baloo2-Medium", size: 30)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
     
     
@@ -40,6 +51,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     @IBAction func skipToCongrats(_ sender: UIButton) {
+        brain.animateOpacityToZero(outletReviewCollection.layer)
         congratsMuncul()
     }
     
@@ -98,12 +110,22 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         
         
         labeltester2.text = ""
-        outletLabelTester2.alpha = 0
         outletSkipToCongrats.alpha = 0
         outletReviewCollection.alpha = 0
         outletImageCongrats.image = UIImage (named: "congrats.png")
         
         brain.animateScale(outletImageCongrats.layer)
+    }
+    
+    func subtleAnimate(){
+        let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)
+        emitter.emitterPosition = CGPoint(x: view.frame.width/4, y: view.frame.height)
+        emitter.emitterSize = CGSize(width: view.frame.width, height: 2)
+        view.layer.insertSublayer(emitter, at: 0)
+        let emitter2 = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "circle"), range: 15)
+        emitter2.emitterPosition = CGPoint(x: view.frame.width/4, y: view.frame.height)
+        emitter2.emitterSize = CGSize(width: view.frame.width, height: 2)
+        view.layer.insertSublayer(emitter2, at: 0)
     }
     
 }

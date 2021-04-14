@@ -14,9 +14,16 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var buttonRandom: UIButton!
     @IBOutlet weak var buttonOke: UIButton!
     
-    var dataCard = ["Book","Brush","Crayon","Eraser","Glue","Highlighter","Paper","Pen","Pencil","Ruler","Sharpener","Tape"]
+    let defaults = UserDefaults.standard
+    var cardChosen = 0
+    var dataCard = itemNames
     
     var textArray : [String] = []
+    private let sectionInsets = UIEdgeInsets(
+      top: 50.0,
+      left: 20.0,
+      bottom: 20.0,
+      right: 20.0)
     
     private var selectedItems: [String] = []
     override func viewDidLoad() {
@@ -40,69 +47,77 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
         buttonRandom.layer.borderWidth = 5
     }
     
-    @IBAction func closePopup(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    //IBAction
+    @IBAction func buttonRandomAction(_ sender: Any) {
+        cardChosen = 0
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "randomizerVc") as! RandomizerViewController
+//
+//        vc.modalPresentationStyle = .fullScreen
+//
+//        self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func buttonOkeAction(_ sender: Any) {
+        cardChosen = 1
+//        performSegue(withIdentifier: "defRandomizer", sender: nil)
+    }
     
+    @IBAction func closePopup(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVc = segue.destination as! RandomizerViewController
+        destVc.imageChosen = textArray
+        destVc.pathChosen = cardChosen
+    }
+    
+    //select collection view
+    var totalItem = 0
+    var tItem_Now = 0
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
 //        labeltester2.text = listOfImageString[indexPath.item]
         print(dataCard[indexPath.item])
         
-        
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderColor = UIColor.red.cgColor
-        cell?.layer.borderWidth = 5
-        cell?.layer.cornerRadius = 12
-        textArray.append(dataCard[indexPath.item])
-        print(textArray)
-        
+        totalItem = defaults.value(forKey: "LamaWaktu") as! Int
+        if tItem_Now < totalItem {
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.layer.borderColor = UIColor.red.cgColor
+            cell?.layer.borderWidth = 5
+            cell?.layer.cornerRadius = 12
+            textArray.append(dataCard[indexPath.item])
+            print(textArray)
+            
+        } else {
+            tItem_Now = 0
+        }
+        tItem_Now += 1
+        print("Total item = \(tItem_Now)")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderColor = UIColor.clear.cgColor
-        textArray = textArray.filter { $0 != dataCard[indexPath.item] }
-        print(textArray)
+        totalItem = defaults.value(forKey: "LamaWaktu") as! Int
+        if tItem_Now < totalItem {
+            print("deSelected cell #\(indexPath.item)!")
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.layer.borderColor = UIColor.clear.cgColor
+            textArray = textArray.filter { $0 != dataCard[indexPath.item] }
+            print(textArray)
+            
+        } else if tItem_Now < 0 {
+            tItem_Now = 0
+        }
+        tItem_Now -= 1
+        print("Total item = \(tItem_Now)")
     }
 
 }
 
-//extension PopUpVC: UICollectionViewDelegate{
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-////        print("You tapped me at \(indexPath)")
-////        let cell = collectionView.cellForItem(at: <#T##IndexPath#>) //This return UICollectionView Cell you need to type cast it
-//        // After you have the access to the cell, you can do whatever you want
-//
-//        print("You selected cell #\(indexPath.item)!")
-////        labeltester2.text = listOfImageString[indexPath.item]
-//        print(dataCard[indexPath.item])
-//
-//        //append select
-//        let cell = collectionView.cellForItem(at: indexPath)
-//        cell?.backgroundColor = UIColor.red
-//        textArray.append(dataCard[indexPath.item])
-//        print(textArray)
-//
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//
-//        let cell = collectionView.cellForItem(at: indexPath)
-//        cell?.backgroundColor = UIColor.clear
-//        textArray = textArray.filter { $0 != dataCard[indexPath.item] }
-//        print(textArray)
-//    }
-//
-//
-//}
-
+//Mark: - Extension
 extension PopUpVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
@@ -126,5 +141,22 @@ extension PopUpVC: UICollectionViewDelegateFlowLayout{ //let specify what is the
         
         return CGSize(width: 150, height: 150)
     }
+    
+//    func collectionView(
+//        _ collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        insetForSectionAt section: Int
+//      ) -> UIEdgeInsets {
+//        return sectionInsets
+//      }
+      
+      // 4
+      func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+      ) -> CGFloat {
+        return sectionInsets.bottom
+      }
     
 }

@@ -66,6 +66,7 @@
 		BF6566A22623F4CD00EFF624 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */; };
 		BF6566B02623FB9100EFF624 /* Randomizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */; };
 		BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */; };
+		BF78D33F2625DB3D00B54C43 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78D33E2625DB3D00B54C43 /* Card.swift */; };
 		BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA382C2623B84B00CDF56B /* PopOver.storyboard */; };
 		BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */; };
 		BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */; };
@@ -166,6 +167,7 @@
 		BF6566A02623F4CD00EFF624 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		BF6566AF2623FB9100EFF624 /* Randomizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Randomizer.storyboard; sourceTree = "<group>"; };
 		BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerViewController.swift; sourceTree = "<group>"; };
+		BF78D33E2625DB3D00B54C43 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BFCA382D2623B84B00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ambi/Base.lproj/PopOver.storyboard; sourceTree = "<group>"; };
 		BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCA38542623BC3300CDF56B /* AmbiBrain.swift */,
+				BF78D33E2625DB3D00B54C43 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */,
 				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
 				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
+				BF78D33F2625DB3D00B54C43 /* Card.swift in Sources */,
 				BF6566792623E6B400EFF624 /* HomeCollectionViewCell.swift in Sources */,
 				EB1D06922620891900C03AD5 /* AboutViewController.swift in Sources */,
 				EF36DE15261D5B0A00F7E5EE /* ViewController.swift in Sources */,

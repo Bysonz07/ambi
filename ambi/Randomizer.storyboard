@@ -13,44 +13,54 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Storyboard Reference-->
+        <scene sceneID="UGG-9Z-ibp">
+            <objects>
+                <viewControllerPlaceholder id="J4U-4t-lK5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0bx-xU-Tq7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZq-Du-lu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="-294"/>
+        </scene>
         <!--Randomizer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RandomizerViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="randomizerVc" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="RandomizerViewController" customModule="ambi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="gradientView" customModule="ambi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-D1-Swc">
-                                <rect key="frame" x="488" y="341" width="390" height="206"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-D1-Swc">
+                                <rect key="frame" x="438" y="341" width="508" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-or-LTr">
-                                <rect key="frame" x="589" y="626" width="184" height="60"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
-                                <state key="normal" title="Random">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="showImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUP-w2-HMD"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-JI-8Ac">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-JI-8Ac">
                                 <rect key="frame" x="526" y="254" width="316" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-or-LTr">
+                                <rect key="frame" x="591" y="653" width="184" height="60"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
+                                <state key="normal" title="Stop!">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFx-Ph-qZ1"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Te-qa8">
-                                <rect key="frame" x="660" y="626" width="45" height="60"/>
+                                <rect key="frame" x="631" y="659" width="111" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
                                 <state key="normal" title="Go!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSR-e5-NSM"/>
+                                    <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sg-fv-SWC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,18 +84,42 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="EjZ-tA-2dN"/>
+                    <navigationItem key="navigationItem" id="EjZ-tA-2dN">
+                        <barButtonItem key="leftBarButtonItem" title="house" image="house" catalog="system" id="OZQ-2g-Tgh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="L4y-ER-quC" kind="unwind" unwindAction="unWindToHome:" id="VJa-Rr-XNc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="setting" image="gearshape" catalog="system" id="lBE-Cr-58K">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qbU-kt-aaU" kind="popoverPresentation" popoverAnchorBarButtonItem="lBE-Cr-58K" id="3oo-XD-9Ys">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="Oaq-Te-qa8" id="Kxq-qg-auI"/>
-                        <outlet property="imageRandom" destination="h2Z-D1-Swc" id="Haj-QF-S5N"/>
-                        <outlet property="randomButton" destination="SiK-or-LTr" id="IIX-57-wXx"/>
-                        <outlet property="randomGetLabel" destination="9X7-JI-8Ac" id="vhx-Mg-bHn"/>
+                        <outlet property="getItemName" destination="9X7-JI-8Ac" id="rTm-eo-9WJ"/>
+                        <outlet property="goButton" destination="Oaq-Te-qa8" id="CCp-mf-WrA"/>
+                        <outlet property="imageItems" destination="h2Z-D1-Swc" id="MoS-VG-FSe"/>
+                        <outlet property="randomButton" destination="SiK-or-LTr" id="fEM-lZ-HAx"/>
                         <segue destination="BeF-po-SXs" kind="show" identifier="timer" id="CLg-wd-xG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="L4y-ER-quC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1407.3206442166909" y="93.1640625"/>
+            <point key="canvasLocation" x="2795.3147877013175" y="93.1640625"/>
+        </scene>
+        <!--PopOver-->
+        <scene sceneID="g8H-7L-wwz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PopOver" id="qbU-kt-aaU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkG-Ha-Ntc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178.7701317715955" y="-223.24218749999997"/>
         </scene>
         <!--Timer-->
         <scene sceneID="Cqc-vB-I5U">
@@ -95,12 +129,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfa-jo-Lh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812.957540263543" y="92.578125"/>
+            <point key="canvasLocation" x="3199" y="103"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

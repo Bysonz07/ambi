@@ -15,6 +15,7 @@ class SpellingBeeViewController: UIViewController {
     
     var spellPlayer : AVAudioPlayer!
     var brain = AmbiBrain()
+    var indexImages = 0
     let text = "Pencil"
 
     @IBOutlet weak var soundButtonOutlet: UIButton!
@@ -51,7 +52,10 @@ class SpellingBeeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //get passing data
+        let text = itemNames[indexImages]
+        print("text: \(text)")
+        
         self.navigationItem.title = "Stationery"
         let labelsList = [animatedLabels1!,animatedLabels2!,animatedLabels3!,animatedLabels4!,animatedLabels5!,animatedLabels6!,animatedLabels7!,animatedLabels8!,animatedLabels9!,animatedLabels10!,animatedLabels11!]
         
@@ -66,9 +70,9 @@ class SpellingBeeViewController: UIViewController {
 // 
             brain.animateScale(apreciationStars)
 
-            brain.animateImageSequence(image1: "Pencil01.png", image2: "Pencil02.png", image3: "Pencil03.png", image4: "Pencil02.png", image5: "Pencil01.png", uiImageView: gifAnimation1)
+            brain.animateImageSequence(image1: "\(itemNames[indexImages])01.png", image2: "\(itemNames[indexImages])02.png", image3: "\(itemNames[indexImages])03.png", image4: "\(itemNames[indexImages])02.png", image5: "\(itemNames[indexImages])01.png", uiImageView: gifAnimation1)
             
-            brain.animateImageSequence(image1: "Pencil01.png", image2: "Pencil02.png", image3: "Pencil03.png", image4: "Pencil02.png", image5: "Pencil01.png", uiImageView: gifAnimation2)
+            brain.animateImageSequence(image1: "\(itemNames[indexImages])01.png", image2: "\(itemNames[indexImages])02.png", image3: "\(itemNames[indexImages])03.png", image4: "\(itemNames[indexImages])02.png", image5: "\(itemNames[indexImages])01.png", uiImageView: gifAnimation2)
             
             brain.clearJuglingText(text: text, listOfLabels: labelsList)
             
@@ -94,7 +98,16 @@ class SpellingBeeViewController: UIViewController {
         
         //emitter bg
         subtleAnimate()
-
+        
+        
+        //navigation setting
+        self.navigationItem.title = "Stationery"
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Baloo2-Medium", size: 30)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
     
     func subtleAnimate(){

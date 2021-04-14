@@ -9,68 +9,84 @@ import UIKit
 
 class RandomizerViewController: UIViewController {
 
-    @IBOutlet var imageRandom: UIImageView!
+    @IBOutlet weak var imageItems: UIImageView!
     @IBOutlet weak var randomButton: UIButton!
+    @IBOutlet weak var getItemName: UILabel!
     @IBOutlet weak var goButton: UIButton!
     
-    @IBOutlet weak var randomGetLabel: UILabel!
+    var numbers:Int = 0
+    var pathChosen = 0
     
-    var brain = AmbiBrain()
-    var isCellSelected = false
     
-    let imageNames = ["Book", "Brush", "Crayon", "Eraser", "Glue", "Highlighter", "Paper", "Pen", "Pencil", "Ruler", "Sharpener", "Tape"];
+    lazy var displayLink = CADisplayLink(target: self, selector: #selector(randoming))
+    var imageNames = itemNames
+    var imageChosen : [String] = []
+    var loopRound = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Stationery"
+        displayLink.add(to: .main, forMode: .default)
         
-        //button visibility
-        goButton.isHidden = true
         //emitter
         subtleAnimate()
         
-        //displayLink
-        let displaylink = CADisplayLink(target: self, selector: #selector(handleUpdate))
-    }
-    
-    @objc func handleUpdate(){
-        let seconds = Date()
-    }
-    
-    @IBAction func showImage(_ sender: Any) {
-        let number:Int = Int (arc4random_uniform(12));
+        // test
+        print(pathChosen)
+        print("Image Chosen")
+        print(imageChosen)
+        print("\nImageNames")
+        print(imageItems)
+        //button
+        goButton.isHidden = true
+        goButton.layer.backgroundColor = UIColor.white.cgColor
+        goButton.layer.cornerRadius = 12
         
-        imageRandom.image = UIImage (named: imageNames[number]);
-        imageRandom.layer.cornerRadius = 12
-        randomGetLabel.text = imageNames[number]
-        isCellSelected.toggle()
+        randomButton.layer.backgroundColor = UIColor.white.cgColor
+        randomButton.layer.cornerRadius = 12
         
-        if isCellSelected{
-            goButton.isHidden = false
-            randomButton.isHidden = true
-        }
+        self.navigationItem.title = "Stationery"
         
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Baloo2-Medium", size: 30)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attrs
     }
-    
 
-    @IBAction func goTapped(_ sender: Any) {
+    @objc func randoming() -> Int{
+        
+        if pathChosen == 1 {
+            numbers = Int (arc4random_uniform(UInt32(imageChosen.count)))
+            imageItems.image = UIImage(named: imageChosen[numbers])
+        } else {
+            numbers = Int (arc4random_uniform(12))
+            imageItems.image = UIImage (named: imageNames[numbers])
+        }
+        displayLink.preferredFramesPerSecond = 1
+        imageItems.layer.cornerRadius = 12
+        return numbers
+    }
+    
+    @IBAction func randomAction(_ sender: Any) {
+        displayLink.isPaused = true
+        getItemName.text = "\(imageNames[numbers])"
+        goButton.isHidden = false
+        randomButton.isHidden = true
+    }
+    
+    @IBAction func goAction(_ sender: Any) {
+//        NotificationCenter.default.post(name: Notification.Name("randomV"), object: numbers)
         performSegue(withIdentifier: "timer", sender: nil)
     }
     
-    @IBAction func unWindToRandom(_ sender:UIStoryboardSegue){
-        
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destVc = segue.destination as! TimerViewController
+        destVc.indexImage = numbers
+
     }
-    */
-    //bg emitter
+    
     func subtleAnimate(){
         let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)
         emitter.emitterPosition = CGPoint(x: view.frame.width/4, y: view.frame.height)
@@ -81,5 +97,4 @@ class RandomizerViewController: UIViewController {
         emitter2.emitterSize = CGSize(width: view.frame.width, height: 2)
         view.layer.insertSublayer(emitter2, at: 0)
     }
-    
 }

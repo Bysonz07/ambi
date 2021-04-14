@@ -13,9 +13,9 @@ let url = Bundle.main.url(forResource: "bgmusik", withExtension: "mp3")
 
 class ViewController: UIViewController {
     
+    
+    
     @IBOutlet var homeCollectionView: UICollectionView!
-    
-    
     
     func stopSound() {
             
@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         musicPlayer = try! AVAudioPlayer(contentsOf: url!)
         musicPlayer.play()
     }
-    
     
     //View Did Load
     override func viewDidLoad() {
@@ -64,6 +63,10 @@ class ViewController: UIViewController {
         subtleAnimate()
     }
 
+    @IBAction func unWindToHome(_ sender:UIStoryboardSegue){
+        
+    }
+    
     func subtleAnimate(){
         let emitter = Emitter.getEmitter(with: UIImage(imageLiteralResourceName: "triangle"), range: 45)
         emitter.emitterPosition = CGPoint(x: view.frame.width/4, y: view.frame.height)
@@ -82,14 +85,18 @@ extension ViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+//        let destVc = storyboard?.instantiateViewController(identifier: "popVc") as! PopUpVC
 //        if indexPath.item == 1 {
-//            performSegue(withIdentifier: "Modality", sender: nil)
+//            destVc.cardChosen = 0
+//            performSegue(withIdentifier: "randomizer", sender: nil)
 //        }
 //        else if indexPath.item == 2{
-//            performSegue(withIdentifier: "Modality", sender: nil)
+//            destVc.cardChosen = 1
+//            performSegue(withIdentifier: "randomizer", sender: nil)
 //        }
 //        else if indexPath.item == 3{
-//            performSegue(withIdentifier: "Modality", sender: nil)
+//            destVc.cardChosen = 2
+//            performSegue(withIdentifier: "randomizer", sender: nil)
 //        }
         performSegue(withIdentifier: "randomizer", sender: nil)
         

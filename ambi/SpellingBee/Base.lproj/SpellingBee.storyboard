@@ -20,10 +20,6 @@
                                 <rect key="frame" x="149" y="468" width="1069" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5F8-aO-WzR">
-                                <rect key="frame" x="882" y="487" width="287" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="center" misplaced="YES" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="y0P-tT-i0Q">
                                 <rect key="frame" x="307" y="551" width="590" height="50"/>
                                 <subviews>
@@ -111,7 +107,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-ug-TTJ">
-                                <rect key="frame" x="267" y="487" width="287" height="153"/>
+                                <rect key="frame" x="175" y="486" width="397" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dds-rq-eCl">
@@ -126,6 +122,10 @@
                                     <segue destination="8LE-Bi-U3W" kind="show" id="eOh-0T-pEC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5F8-aO-WzR">
+                                <rect key="frame" x="786" y="486" width="397" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,7 +142,22 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="xQ8-yI-VqD"/>
+                    <navigationItem key="navigationItem" id="xQ8-yI-VqD">
+                        <barButtonItem key="leftBarButtonItem" title="house" image="house" catalog="system" id="y41-mb-zdn">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Ue0-pb-BJS" kind="unwind" unwindAction="unWindToHome:" id="MWC-9P-BNv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="gear" image="gearshape" catalog="system" id="Q4n-xQ-x2M">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="KMk-pN-4pq" kind="popoverPresentation" popoverAnchorBarButtonItem="Q4n-xQ-x2M" id="Rm4-bP-fc9">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="animatedLabels1" destination="C3r-6F-d7z" id="qNy-jF-zOf"/>
                         <outlet property="animatedLabels10" destination="GvL-2P-KBW" id="025-fb-1k7"/>
@@ -162,8 +177,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Ue0-pb-BJS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="713.76281112737911" y="78.515625"/>
+            <point key="canvasLocation" x="1407.3206442166909" y="78.515625"/>
+        </scene>
+        <!--PopOver-->
+        <scene sceneID="FeD-Af-TUM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PopOver" id="KMk-pN-4pq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFs-As-eoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="-214"/>
         </scene>
         <!--Review-->
         <scene sceneID="BzZ-lD-3oj">
@@ -173,13 +197,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yi-Cc-T67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="491"/>
+            <point key="canvasLocation" x="1408" y="488"/>
         </scene>
     </scenes>
     <resources>
         <image name="TextSpellPlaceHolder" width="810" height="278"/>
         <image name="bintanggoodjob" width="783" height="405"/>
         <image name="forward.end" catalog="system" width="128" height="120"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="simbolSuara" width="81" height="76"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
