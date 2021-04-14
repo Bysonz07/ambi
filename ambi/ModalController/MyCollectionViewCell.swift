@@ -54,7 +54,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         stampFill.isHidden = false
-        onStampClick(is: stateVis)
+        onStampClick(is: true)
         }
     
     public func configure(with image: UIImage, item: String){ //dequeing

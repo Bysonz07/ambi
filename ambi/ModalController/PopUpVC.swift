@@ -84,16 +84,22 @@ class PopUpVC: UIViewController, UICollectionViewDelegate {
         print(dataCard[indexPath.item])
         
         
+        
         if textArray.count < defaults.value(forKey: "BanyakItem") as! Int {
-//            let cell = collectionView.cellForItem(at: indexPath)
+            let cell = collectionView.cellForItem(at: indexPath)
 //            isCell = true
 //            cell?.layer.borderWidth = 5
 //            cell?.layer.cornerRadius = 12
+            let bell = collectionView.layoutAttributesForItem(at: indexPath)
             textArray.append(dataCard[indexPath.item])
             print(textArray)
             
+            
         }
     }
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         

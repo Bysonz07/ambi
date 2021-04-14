@@ -9,9 +9,12 @@ import UIKit
 
 class ReviewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+
+    @IBOutlet weak var outletImageCongrats: UIImageView!
+    @IBOutlet weak var labeltester2: UILabel!
     @IBOutlet weak var outletReviewCollection: UICollectionView!
     @IBOutlet weak var outletSkipToCongrats: UIButton!
-    @IBOutlet weak var labeltester2: UILabel!
+    
     var brain = AmbiBrain()
     let defaults = UserDefaults.standard
     let reuseIdentifier = "reviewCell" // also enter this string as the cell identifier in the storyboard
@@ -58,12 +61,12 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     
 
-    
-    @IBAction func skipToCongrats(_ sender: UIButton) {
+    @IBAction func skipAction(_ sender: UIButton) {
         brain.animateOpacityToZero(outletReviewCollection.layer)
         congratsMuncul()
     }
     
+
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -115,7 +118,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
     
     
     
-    @IBOutlet weak var outletImageCongrats: UIImageView!
+
     func congratsMuncul() {
         
         
@@ -138,6 +141,7 @@ class ReviewController : UIViewController, UICollectionViewDelegate, UICollectio
         emitter2.emitterSize = CGSize(width: view.frame.width, height: 2)
         view.layer.insertSublayer(emitter2, at: 0)
     }
+    
     
 }
 

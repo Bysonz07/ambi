@@ -78,6 +78,8 @@ class SpellingBeeViewController: UIViewController {
         soundButtonOutlet.alpha = 0.5
         soundButtonOutlet.isEnabled = false
         
+        nextButton.alpha = 0.5
+        nextButton.isEnabled = false
         
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1) { [self] in

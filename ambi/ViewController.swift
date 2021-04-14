@@ -11,6 +11,7 @@ import AVFoundation
 var musicPlayer : AVAudioPlayer!
 let url = Bundle.main.url(forResource: "bgmusik", withExtension: "mp3")
 
+
 class ViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(
@@ -31,7 +32,9 @@ class ViewController: UIViewController {
     func playSound() {
         
         musicPlayer = try! AVAudioPlayer(contentsOf: url!)
+        
         musicPlayer.play()
+        musicPlayer.volume = 0.15
     }
     
     //View Did Load
