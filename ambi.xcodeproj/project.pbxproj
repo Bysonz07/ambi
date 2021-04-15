@@ -65,8 +65,8 @@
 		BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */; };
 		BF78D33F2625DB3D00B54C43 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78D33E2625DB3D00B54C43 /* Card.swift */; };
 		BF7982722627B9D30060AA0E /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7982712627B9D30060AA0E /* Review.storyboard */; };
-		BF7982772627BA090060AA0E /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7982762627BA090060AA0E /* ReviewController.swift */; };
 		BF79827C2627BA1A0060AA0E /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79827B2627BA1A0060AA0E /* ReviewCollectionViewCell.swift */; };
+		BFBF43842627EA9000348673 /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF43832627EA9000348673 /* ReviewController.swift */; };
 		BFCA382E2623B84B00CDF56B /* PopOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCA382C2623B84B00CDF56B /* PopOver.storyboard */; };
 		BFCA38342623B98C00CDF56B /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */; };
 		BFCA38352623B98C00CDF56B /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */; };
@@ -166,8 +166,8 @@
 		BF6566B42623FBBE00EFF624 /* RandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerViewController.swift; sourceTree = "<group>"; };
 		BF78D33E2625DB3D00B54C43 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BF7982712627B9D30060AA0E /* Review.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
-		BF7982762627BA090060AA0E /* ReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewController.swift; path = "../../../../Downloads/ambi-kane-features-review-2/ambi/Controllers/ReviewController.swift"; sourceTree = "<group>"; };
 		BF79827B2627BA1A0060AA0E /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFBF43832627EA9000348673 /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		BFCA382D2623B84B00CDF56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ambi/Base.lproj/PopOver.storyboard; sourceTree = "<group>"; };
 		BFCA38322623B98C00CDF56B /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		BFCA38332623B98C00CDF56B /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
@@ -370,8 +370,8 @@
 				BF4E77932624FD6E0096C6A2 /* TimerViewController.swift */,
 				BF4E778E2624FD580096C6A2 /* Timer.storyboard */,
 				EF36DE19261D5B0B00F7E5EE /* Assets.xcassets */,
+				BFBF43832627EA9000348673 /* ReviewController.swift */,
 				BF7982712627B9D30060AA0E /* Review.storyboard */,
-				BF7982762627BA090060AA0E /* ReviewController.swift */,
 				BF79827B2627BA1A0060AA0E /* ReviewCollectionViewCell.swift */,
 				BF4E77C4262535770096C6A2 /* Audio */,
 				EB479BA92620064D0059FCCB /* bgmusik.mp3 */,
@@ -591,8 +591,8 @@
 			files = (
 				EB479BAF26200D720059FCCB /* PlaytimeTableViewController.swift in Sources */,
 				EB1D069726208A5E00C03AD5 /* RatingViewController.swift in Sources */,
-				BF7982772627BA090060AA0E /* ReviewController.swift in Sources */,
 				BFCA385A2623CD3E00CDF56B /* Emitter.swift in Sources */,
+				BFBF43842627EA9000348673 /* ReviewController.swift in Sources */,
 				BF6566B52623FBBE00EFF624 /* RandomizerViewController.swift in Sources */,
 				EB479BA0261FF4C60059FCCB /* GradientViewController.swift in Sources */,
 				EB479BA5262006210059FCCB /* SettingsTableViewController.swift in Sources */,
