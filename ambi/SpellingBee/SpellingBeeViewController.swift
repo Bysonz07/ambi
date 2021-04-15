@@ -21,6 +21,7 @@ class SpellingBeeViewController: UIViewController {
     var imageChosen : [String] = []
     var stopRound = 0
     
+
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var soundButtonOutlet: UIButton!
@@ -141,9 +142,9 @@ class SpellingBeeViewController: UIViewController {
         
         performSegue(withIdentifier: "randomizer", sender: nil)
     }
+   
     @IBAction func skipAction(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "review", sender: nil)
+        performSegue(withIdentifier: "reviewer", sender: nil)
     }
     
     //segue

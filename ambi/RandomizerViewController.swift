@@ -97,6 +97,7 @@ class RandomizerViewController: UIViewController {
     
     @IBAction func randomAction(_ sender: Any) {
         stop += 1
+        
         brain.stopSound(musicName: "LotterSound")
         brain.playSound(musicName: "SelectedDingSound")
         

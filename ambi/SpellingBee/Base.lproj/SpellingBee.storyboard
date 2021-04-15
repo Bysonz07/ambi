@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Medium.ttf">
+            <string>Baloo2-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Spelling Bee View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -38,18 +43,6 @@
                                 <rect key="frame" x="175" y="486" width="397" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dds-rq-eCl">
-                                <rect key="frame" x="645" y="865" width="76" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Skip" image="forward.end" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="skipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXD-6f-wx8"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5F8-aO-WzR">
                                 <rect key="frame" x="786" y="486" width="397" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,6 +131,19 @@
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" alignment="center"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfJ-Ho-yoA">
+                                <rect key="frame" x="638" y="862" width="91" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Skip" image="forward.end" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K76-8C-QI6"/>
+                                    <segue destination="xib-wg-vrP" kind="show" identifier="reviewer" id="Yt9-fn-FxC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,10 +192,9 @@
                         <outlet property="gifAnimation1" destination="eVJ-ug-TTJ" id="v1v-mu-Kz5"/>
                         <outlet property="gifAnimation2" destination="5F8-aO-WzR" id="xhj-qf-TZl"/>
                         <outlet property="nextButton" destination="Vyp-eZ-rni" id="ONV-eO-zOk"/>
-                        <outlet property="skipButton" destination="Dds-rq-eCl" id="Glm-2M-egR"/>
+                        <outlet property="skipButton" destination="JfJ-Ho-yoA" id="spy-ls-HIv"/>
                         <outlet property="soundButtonOutlet" destination="8WH-LF-pz9" id="OdA-91-Ntf"/>
-                        <segue destination="8LE-Bi-U3W" kind="show" identifier="review" id="Cw0-H1-2K9"/>
-                        <segue destination="fJA-Me-19o" kind="show" identifier="randomizer" id="qYp-8E-uVv"/>
+                        <segue destination="8LE-Bi-U3W" kind="show" identifier="randomizer" id="Cw0-H1-2K9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,15 +202,15 @@
             </objects>
             <point key="canvasLocation" x="2101.3177159590041" y="78.515625"/>
         </scene>
-        <!--Randomizer-->
-        <scene sceneID="TtC-og-Ptz">
+        <!--Review-->
+        <scene sceneID="cWl-LY-pzI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Randomizer" id="fJA-Me-19o" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="CVz-p7-vri"/>
+                <viewControllerPlaceholder storyboardName="Review" id="xib-wg-vrP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DAD-9k-hLS"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="25u-52-jIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5f-UA-WQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2101" y="497"/>
+            <point key="canvasLocation" x="2111" y="506"/>
         </scene>
         <!--PopOver-->
         <scene sceneID="FeD-Af-TUM">
@@ -215,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="2470.7174231332356" y="-214.453125"/>
         </scene>
-        <!--Review-->
+        <!--Randomizer-->
         <scene sceneID="BzZ-lD-3oj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Review" id="8LE-Bi-U3W" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Randomizer" id="8LE-Bi-U3W" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="IlS-ub-C7b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yi-Cc-T67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

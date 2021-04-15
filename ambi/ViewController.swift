@@ -32,9 +32,10 @@ class ViewController: UIViewController {
     func playSound() {
         
         musicPlayer = try! AVAudioPlayer(contentsOf: url!)
-        
+        musicPlayer.volume = 0.1
+        musicPlayer.numberOfLoops = 99
         musicPlayer.play()
-        musicPlayer.volume = 0.15
+        
     }
     
     //View Did Load

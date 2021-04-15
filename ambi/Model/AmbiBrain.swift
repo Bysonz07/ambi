@@ -66,6 +66,7 @@ class AmbiBrain{
     
     func playSound(musicName: String , musicExtension: String = "mp3") {
         let url = Bundle.main.url(forResource: musicName, withExtension: musicExtension)
+        spellPlayer.volume = 0.7
         spellPlayer = try! AVAudioPlayer(contentsOf: url!)
         spellPlayer.play()
     }
